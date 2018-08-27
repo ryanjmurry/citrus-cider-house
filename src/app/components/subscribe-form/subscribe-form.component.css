@@ -1,0 +1,21 @@
+.subscribe-container {
+  padding: 20px;
+  width: 40%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background: grey;
+}
+
+.header-content {
+  text-align: center;
+  color: white;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1.1em;
+}
