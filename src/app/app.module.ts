@@ -7,7 +7,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { AboutComponent } from './components/about/about.component';
+=======
+import { HomeComponent } from './components/home/home.component';
+>>>>>>> 57857f7f268ae9446d917e0986dee4b48dcfaed8
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +23,11 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     AboutComponent
+=======
+    HomeComponent
+>>>>>>> 57857f7f268ae9446d917e0986dee4b48dcfaed8
   ],
   imports: [
     BrowserModule,
