@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserComments } from "../../models/user-comments";
 
 @Component({
   selector: 'app-subscribe-form',
@@ -12,4 +13,6 @@ export class SubscribeFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  submitComment(name:string, email:string, message:string) {
+  }
 }
