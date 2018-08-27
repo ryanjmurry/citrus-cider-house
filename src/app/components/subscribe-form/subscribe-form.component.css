@@ -13,9 +13,9 @@
 }
 
 .row {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-label {
-  font-size: 1.1em;
+.commentArea {
+  margin-bottom: 10px;
 }
