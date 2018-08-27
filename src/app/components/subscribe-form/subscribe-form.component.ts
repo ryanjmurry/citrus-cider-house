@@ -14,5 +14,8 @@ export class SubscribeFormComponent implements OnInit {
   }
 
   submitComment(name:string, email:string, message:string) {
+    let newComment: UserComments = new UserComments(name, email, message)
+    console.log(newComment);
+    
   }
 }
