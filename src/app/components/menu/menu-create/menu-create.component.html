@@ -1,3 +1,23 @@
-<p>
-  menu-create works!
-</p>
+<h3>Create Menu Item</h3>
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Item Name:</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="menuItem.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="price">Item Price:</label>
+      <input type="number" class="form-control" id="name" required [(ngModel)]="menuItem.price" name="name">
+    </div>
+    <div class="form-group">
+      <label for="name">Item Description:</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="menuItem.description" name="name">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Submitted Successfully!</h4>
+    <button class="btn btn-success" (click)="newMenuItem()">Add</button>
+  </div>
