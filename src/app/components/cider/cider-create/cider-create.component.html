@@ -1,3 +1,32 @@
-<p>
-  cider-create works!
-</p>
+<h3>Create Cider</h3>
+<div [hidden]="submitted">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="cider.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input type="text" class="form-control" id="image" required [(ngModel)]="cider.image" name="image">
+    </div>
+    <div class="form-group">
+      <label for="abv">ABV</label>
+      <input type="text" class="form-control" id="abv" required [(ngModel)]="cider.abv" name="abv">
+    </div>
+    <div class="form-group">
+      <label for="ta">T.A.</label>
+      <input type="text" class="form-control" id="ta" required [(ngModel)]="cider.ta" name="ta">
+    </div>
+    <div class="form-group">
+      <label for="brix">Brix</label>
+      <input type="text" class="form-control" id="brix" required [(ngModel)]="cider.brix" name="brix">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Submitted Successfully!</h4>
+  <button class="btn btn-success" (click)="newCider()">Add</button>
+</div>
