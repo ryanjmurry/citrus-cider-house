@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Cider } from '../../../models/cider';
 import { CiderService } from '../../../services/cider.service';
 
