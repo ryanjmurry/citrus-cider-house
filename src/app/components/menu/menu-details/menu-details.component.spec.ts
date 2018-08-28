@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {} from 'jasmine';
-import { AboutComponent } from './about.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+import { MenuDetailsComponent } from './menu-details.component';
+
+describe('MenuDetailsComponent', () => {
+  let component: MenuDetailsComponent;
+  let fixture: ComponentFixture<MenuDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
+      declarations: [ MenuDetailsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(MenuDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
