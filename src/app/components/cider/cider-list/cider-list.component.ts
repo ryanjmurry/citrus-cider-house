@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { CiderService } from '../../../services/cider.service';
 
 @Component({
   selector: 'app-cider-list',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CiderListComponent implements OnInit {
 
-  constructor() { }
+  ciders: any;
+
+  constructor(private ciderService: CiderService) { }
 
   ngOnInit() {
+    this.ciderService.getCidersList();
+  }
+
+  getCidersList() {
+    this.ciderService.getCidersList().snapshotChanges().pipe(
+      map(changes => 
+        changes.map(c => ({key: c.payload.key, ...c.payload.val()}))
+      )
+    ).subscribe(ciders => {
+      this.ciders = ciders;
+    })
+  }
+
+  deleteCiders() {
+    this.ciderService.deleteAll();
   }
 
 }
