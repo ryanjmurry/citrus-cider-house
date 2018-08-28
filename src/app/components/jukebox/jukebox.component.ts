@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JukeboxService } from '../../services/jukebox.service';
 import { JukeboxSong } from '../../models/jukebox';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 @Component({
   selector: 'app-jukebox',
@@ -11,12 +12,14 @@ import { JukeboxSong } from '../../models/jukebox';
 export class JukeboxComponent implements OnInit {
 
   constructor(private jukebox: JukeboxService) { }
-  currentPlaylist = [];
+  currentPlaylist: any;
   artistInfo;
   albumGot: boolean = false;
   trackInfo;
   trackGot: boolean = false;
   ngOnInit() {
+    this.jukebox.getSongsList().valueChanges().subscribe(playlist => {this.currentPlaylist = playlist});
+    console.log(typeof this.currentPlaylist)
   }
 
   getArtist(artist: string){
@@ -44,8 +47,9 @@ export class JukeboxComponent implements OnInit {
     this.jukebox.getAlbumById(albumId)
       .subscribe(albumData => {albumImg = albumData.json().album[0].strAlbumThumb
         let newSong = new JukeboxSong(trackName, albumName, artistName, albumImg);
-        console.log(newSong)
-        this.currentPlaylist.push(newSong);
+        this.jukebox.addSong(newSong);
+        this.currentPlaylist = this.jukebox.getSongsList();
+        console.log(typeof this.currentPlaylist)
       })
   }
 

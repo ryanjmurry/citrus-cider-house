@@ -2,13 +2,29 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { jukeboxAPIKey } from '../api-keys';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { JukeboxSong } from '../models/jukebox';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JukeboxService {
 
-  constructor(private http: Http) { }
+  private dbPath = '/songs';
+
+  songsRef: AngularFireList<any> = null;
+
+  constructor(private http: Http, private db: AngularFireDatabase) {
+    this.songsRef = db.list(this.dbPath);
+  }
+
+  addSong(song: JukeboxSong): void {
+    this.songsRef.push(song);
+  }
+
+  getSongsList(): AngularFireList<any> {
+    return this.songsRef;
+  }
 
 
   getArtistInfo(artist: string) {

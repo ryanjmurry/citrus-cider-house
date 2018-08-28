@@ -36,20 +36,14 @@
 }
 
 .trackInfo {
-  line-height: 60%;
+  line-height: 80%;
   text-align: center;
-}
-
-.currentSong {
-  display: inline-flex;
-  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .currentSongImage {
-
-}
-
-.currentSongImage img {
+  position: relative;
   width: 100px;
   height: auto;
+  float: left;
 }

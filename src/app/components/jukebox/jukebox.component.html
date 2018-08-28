@@ -1,19 +1,21 @@
 <div class="container">
   <h1>Cider Jukebox</h1>
   <div class="playlist">
-    <div class="card" *ngIf='currentPlaylist.length == 0'>
+    <div class="card" *ngIf='currentPlaylist == undefined'>
       <h4>Add a song to our playlist!</h4>
     </div>
-    <div *ngIf='currentPlaylist.length != 0'>
+    <div *ngIf='currentPlaylist != undefined'>
       <div *ngFor="let song of currentPlaylist; let i = index">
         <div *ngIf='i == 0' class="currentSong card">
-          <div class="currentSongImage">
-            <img src="{{song.albumImg}}">
-          </div>
-          <div class="trackInfo">
-            <p class='trackTitle'>{{song.trackName}}</p>
-            <p class='albumTitle'>{{song.albumName}}</p>
-            <p class='artistTitle'>{{song.artistName}}</p>
+          <div class="row">
+            <div class='col-md-1'>
+              <img src="{{song.albumImg}}" class="currentSongImage">
+            </div>
+            <div class="trackInfo col-md-11">
+              <p class='trackTitle'>{{song.trackName}}</p>
+              <p class='albumTitle'>{{song.albumName}}</p>
+              <p class='artistTitle'>{{song.artistName}}</p>
+            </div>
           </div>
         </div>
       </div>
