@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -7,11 +8,13 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
 import { AboutComponent } from './components/about/about.component';
-=======
 import { HomeComponent } from './components/home/home.component';
->>>>>>> 57857f7f268ae9446d917e0986dee4b48dcfaed8
+import { CiderComponent } from './components/cider/cider.component';
+import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
+import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
+import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
+import { CiderEditComponent } from './components/cider/cider-edit/cider-edit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,15 +26,18 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    AboutComponent
-=======
-    HomeComponent
->>>>>>> 57857f7f268ae9446d917e0986dee4b48dcfaed8
+    AboutComponent,
+    HomeComponent,
+    CiderComponent,
+    CiderListComponent,
+    CiderDetailsComponent,
+    CiderCreateComponent,
+    CiderEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
