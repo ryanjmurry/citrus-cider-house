@@ -12,7 +12,11 @@ export class JukeboxService {
 
 
   getArtistInfo(artist: string) {
-    return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/searchalbum.php?s=${artist}`)
+    return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/searchalbum.php?s=${artist}`);
+  }
+
+  getAlbumTracks(albumId: string) {
+    return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/track.php?m=${albumId}`);
   }
 
 

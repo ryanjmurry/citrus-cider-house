@@ -1,31 +1,20 @@
-<p>
-  jukebox works!
-</p>
-
-<input type="text" #artist>
-<button type="button" (click)='getArtist(artist.value)'>Get Artist</button>
-<div *ngIf="albumGot">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="card carousel-item" *ngFor="let album of artistInfo.album; let i = index" [ngClass]="{'active' : i == 0}">
-        <img class="card-img-top d-block w-100" src="{{album.strAlbumThumb}}" alt="{{album.strAlbumStripped}} Thumbnail">
-        <h4 style="z-index: 10;">{{album.strAlbumStripped}}</h4>
-        <!-- <p>{{album.idAlbum}}</p> -->
-
-      </div>
+<div class="container">
+  <h1>Cider Jukebox</h1>
+  <input type="text" class="form-control" #artist>
+  <button type="button" (click)='getArtist(artist.value)' class="btn btn-primary">Get Artist</button>
+  <div *ngIf='trackGot'><button type="button" (click)='backToAlbums()' class="btn btn-warning">Back to Albums</button></div>
+  <div *ngIf="albumGot" class="albums">
+    <div class="card album" *ngFor="let album of artistInfo.album" (click)="getTracks(album.idAlbum)">
+      <img class="card-img-top" src="{{album.strAlbumThumb}}" alt="{{album.strAlbumStripped}} Thumbnail">
+      <h4 style="z-index: 10;">{{album.strAlbumStripped}}</h4>
+      <!-- <p>{{album.idAlbum}}</p> -->
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+  </div>
+  <div class="tracks" *ngIf="trackGot">
+    <div class="songs">
+      <ol>
+        <li *ngFor='let track of trackInfo.track'>{{track.strTrack}}</li>
+      </ol>
+    </div>
   </div>
 </div>

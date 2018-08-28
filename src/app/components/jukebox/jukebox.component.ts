@@ -11,7 +11,9 @@ export class JukeboxComponent implements OnInit {
 
   constructor(private jukebox: JukeboxService) { }
   artistInfo;
-  albumGot: boolean = null
+  albumGot: boolean = false;
+  trackInfo;
+  trackGot: boolean = false;
   ngOnInit() {
   }
 
@@ -21,7 +23,20 @@ export class JukeboxComponent implements OnInit {
       this.albumGot = true;
       console.log('got here, albumGot Status: ' + this.albumGot)
     });
+  }
 
+  getTracks(albumId: string) {
+    this.jukebox.getAlbumTracks(albumId)
+      .subscribe(trackData => {this.trackInfo = trackData.json()
+        this.albumGot = false;
+        this.trackGot = true;
+        console.log(this.trackInfo);
+      })
+  }
+
+  backToAlbums(){
+    this.trackGot = false;
+    this.albumGot = true;
   }
 
 }
