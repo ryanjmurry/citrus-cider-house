@@ -1,0 +1,15 @@
+footer { 
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    background: #ffdeb8;
+    border-top: 4px solid #e76c1f;
+    z-index: 999;
+}
+
+.footer-link {
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+}

@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { CiderComponent } from './components/cider/cider.component';
 import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
 import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
@@ -32,6 +34,8 @@ export const firebaseConfig = {
     AppComponent,
     AboutComponent,
     HomeComponent,
+    HeaderComponent,
+    FooterComponent,
     CiderComponent,
     CiderListComponent,
     CiderDetailsComponent,
