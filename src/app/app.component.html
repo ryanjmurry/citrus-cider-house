@@ -4,10 +4,10 @@
 	<router-outlet></router-outlet>
   <div *ngIf="isLoggedIn">
     <a>{{userName}}</a>
-    <a (click)="logout()">Log out</a>
+    <button class="btn btn-primary" (click)="logout()">Log out</button>
   </div>
   <div *ngIf ="!isLoggedIn">
-    <a (click)="login()">Log in</a>
+    <button class="btn btn-primary" (click)="login()">Log in</button>
   </div>
 	<app-footer></app-footer>    
 </div>
