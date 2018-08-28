@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -11,6 +12,11 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CiderComponent } from './components/cider/cider.component';
+import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
+import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
+import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,11 +31,17 @@ export const firebaseConfig = {
     AboutComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CiderComponent,
+    CiderListComponent,
+    CiderDetailsComponent,
+    CiderCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    Angular2FontawesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],

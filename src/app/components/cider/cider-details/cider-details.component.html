@@ -1,0 +1,47 @@
+<div *ngIf="cider">
+  <div>
+    <label>Name: </label> {{cider.name}}
+  </div>
+  <div>
+    <label>Image: </label> {{cider.image}}
+  </div>
+  <div>
+    <label>ABV: </label> {{cider.abv}}
+  </div>
+  <div>
+    <label>Titratable Acidity: </label> {{cider.ta}}
+  </div>
+  <div>
+    <label>Brix: </label> {{cider.brix}}
+  </div>
+
+  <span class="btn btn-sm btn-danger" (click)="deleteCider()">Delete</span>
+  <span class="btn btn-sm btn-info" (click)="showUpdateForm()">Update</span>
+</div>
+
+<div *ngIf="updateIsActive">
+    <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required [value]="cider.name" name="name" #updateName>
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input type="text" class="form-control" id="image" required [value]="cider.image" name="image" #updateImage>
+        </div>
+        <div class="form-group">
+          <label for="abv">ABV</label>
+          <input type="text" class="form-control" id="abv" required [value]="cider.abv" name="abv" #updateABV>
+        </div>
+        <div class="form-group">
+          <label for="ta">T.A.</label>
+          <input type="text" class="form-control" id="ta" required [value]="cider.ta" name="ta" #updateTA>
+        </div>
+        <div class="form-group">
+          <label for="brix">Brix</label>
+          <input type="text" class="form-control" id="brix" required [value]="cider.brix" name="brix" #updateBrix>
+        </div>
+    
+        <button type="submit" class="btn btn-success" (click)="onSubmit(cider.key, updateName.value, updateImage.value, updateABV.value, updateTA.value, updateBrix.value)">Submit</button>
+      </form>
+</div>
