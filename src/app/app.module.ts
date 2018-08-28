@@ -14,7 +14,11 @@ import { CiderComponent } from './components/cider/cider.component';
 import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
 import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
 import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
-import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
+import { MenuComponent } from './components/menu/menu.component';
+import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
+import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
+import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component'
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,6 +36,10 @@ export const firebaseConfig = {
     CiderListComponent,
     CiderDetailsComponent,
     CiderCreateComponent,
+    MenuComponent,
+    MenuListComponent,
+    MenuDetailsComponent,
+    MenuCreateComponent,
   ],
   imports: [
     BrowserModule,
