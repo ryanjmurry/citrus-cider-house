@@ -14,7 +14,6 @@ import { CiderComponent } from './components/cider/cider.component';
 import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
 import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
 import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
-import { CiderEditComponent } from './components/cider/cider-edit/cider-edit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +31,6 @@ export const firebaseConfig = {
     CiderListComponent,
     CiderDetailsComponent,
     CiderCreateComponent,
-    CiderEditComponent
   ],
   imports: [
     BrowserModule,
