@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +52,8 @@ export const firebaseConfig = {
     FormsModule,
     Angular2FontawesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
