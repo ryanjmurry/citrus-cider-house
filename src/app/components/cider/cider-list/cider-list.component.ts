@@ -30,5 +30,4 @@ export class CiderListComponent implements OnInit {
   deleteCiders() {
     this.ciderService.deleteAll();
   }
-
 }
