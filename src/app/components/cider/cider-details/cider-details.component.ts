@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cider } from '../../../models/cider';
+import { CiderService } from '../../../services/cider.service';
 
 @Component({
   selector: 'app-cider-details',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CiderDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() cider: Cider;
+
+  constructor(private ciderService: CiderService) { }
 
   ngOnInit() {
+  }
+
+  // updateCider() {
+
+  // }
+
+  deleteCider() {
+    this.ciderService.deleteCider(this.cider.key);
   }
 
 }
