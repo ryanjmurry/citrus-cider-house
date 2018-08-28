@@ -1,0 +1,21 @@
+#lemon-logo {
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    left: 50%;
+    top: 15px;
+    margin: 0 0 0 -62px;
+    z-index: 999;
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+    height: 95px;
+    background: #ffdeb8;
+    border-bottom: 4px solid #e76c1f;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+}
