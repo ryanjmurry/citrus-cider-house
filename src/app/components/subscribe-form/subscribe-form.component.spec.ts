@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { SubscribeFormComponent } from './subscribe-form.component';
 import { } from 'jasmine';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('SubscribeFormComponent', () => {
+  let component: SubscribeFormComponent;
+  let fixture: ComponentFixture<SubscribeFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ SubscribeFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(SubscribeFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

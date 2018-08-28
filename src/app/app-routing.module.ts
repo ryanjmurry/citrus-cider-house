@@ -6,6 +6,7 @@ import { CiderComponent } from './components/cider/cider.component';
 import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
 import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'menu/add',
     component: MenuCreateComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 

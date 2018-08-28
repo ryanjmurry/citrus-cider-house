@@ -1,16 +1,13 @@
-<app-header></app-header>
-<br>
-<br>
-<br>
-<br>
-<div *ngIf="isLoggedIn">
-  <a>{{userName}}</a>
-  <a (click)="logout()">Log out</a>
+<div class="wrapper">
+	<app-header></app-header>
+	<img class="citrus-background" src="../../../assets/citrus-background.jpg" alt="citrus background">
+	<router-outlet></router-outlet>
+  <div *ngIf="isLoggedIn">
+    <a>{{userName}}</a>
+    <a (click)="logout()">Log out</a>
+  </div>
+  <div *ngIf ="!isLoggedIn">
+    <a (click)="login()">Log in</a>
+  </div>
+	<app-footer></app-footer>    
 </div>
-<div *ngIf ="!isLoggedIn">
-  <a (click)="login()">Log in</a>
-</div>
-
-<img class="citrus-background" src="../../../assets/citrus-background.jpg" alt="citrus background">
-<router-outlet></router-outlet>
-<app-footer></app-footer>

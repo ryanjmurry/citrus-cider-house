@@ -9,6 +9,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -21,7 +22,9 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
-import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component'
+import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,6 +36,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    SubscribeFormComponent,
     AboutComponent,
     HomeComponent,
     HeaderComponent,
@@ -45,9 +49,12 @@ export const firebaseConfig = {
     MenuListComponent,
     MenuDetailsComponent,
     MenuCreateComponent,
+    AdminComponent,
+    PublishCommentComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     FormsModule,
     Angular2FontawesomeModule,
