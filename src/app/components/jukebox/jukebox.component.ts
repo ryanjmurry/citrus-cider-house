@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JukeboxService } from '../../services/jukebox.service';
+import { JukeboxSong } from '../../models/jukebox';
 
 @Component({
   selector: 'app-jukebox',
@@ -10,6 +11,7 @@ import { JukeboxService } from '../../services/jukebox.service';
 export class JukeboxComponent implements OnInit {
 
   constructor(private jukebox: JukeboxService) { }
+  currentPlaylist = [];
   artistInfo;
   albumGot: boolean = false;
   trackInfo;
@@ -21,7 +23,6 @@ export class JukeboxComponent implements OnInit {
     this.jukebox.getArtistInfo(artist)
       .subscribe(artistData => {this.artistInfo = artistData.json()
       this.albumGot = true;
-      console.log('got here, albumGot Status: ' + this.albumGot)
     });
   }
 
@@ -30,13 +31,22 @@ export class JukeboxComponent implements OnInit {
       .subscribe(trackData => {this.trackInfo = trackData.json()
         this.albumGot = false;
         this.trackGot = true;
-        console.log(this.trackInfo);
       })
   }
 
   backToAlbums(){
     this.trackGot = false;
     this.albumGot = true;
+  }
+
+  addToPlaylist(trackName: string, albumName: string, artistName: string, albumId: string) {
+    let albumImg;
+    this.jukebox.getAlbumById(albumId)
+      .subscribe(albumData => {albumImg = albumData.json().album[0].strAlbumThumb
+        let newSong = new JukeboxSong(trackName, albumName, artistName, albumImg);
+        console.log(newSong)
+        this.currentPlaylist.push(newSong);
+      })
   }
 
 }

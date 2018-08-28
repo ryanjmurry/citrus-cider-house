@@ -19,5 +19,9 @@ export class JukeboxService {
     return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/track.php?m=${albumId}`);
   }
 
+  getAlbumById(albumId: string) {
+    return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/album.php?m=${albumId}`)
+  }
+
 
 }

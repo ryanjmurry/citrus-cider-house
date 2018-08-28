@@ -1,20 +1,53 @@
 <div class="container">
   <h1>Cider Jukebox</h1>
-  <input type="text" class="form-control" #artist>
-  <button type="button" (click)='getArtist(artist.value)' class="btn btn-primary">Get Artist</button>
-  <div *ngIf='trackGot'><button type="button" (click)='backToAlbums()' class="btn btn-warning">Back to Albums</button></div>
-  <div *ngIf="albumGot" class="albums">
-    <div class="card album" *ngFor="let album of artistInfo.album" (click)="getTracks(album.idAlbum)">
-      <img class="card-img-top" src="{{album.strAlbumThumb}}" alt="{{album.strAlbumStripped}} Thumbnail">
-      <h4 style="z-index: 10;">{{album.strAlbumStripped}}</h4>
-      <!-- <p>{{album.idAlbum}}</p> -->
+  <div class="playlist">
+    <div class="card" *ngIf='currentPlaylist.length == 0'>
+      <h4>Add a song to our playlist!</h4>
+    </div>
+    <div *ngIf='currentPlaylist.length != 0'>
+      <div *ngFor="let song of currentPlaylist; let i = index">
+        <div *ngIf='i == 0' class="currentSong card">
+          <div class="currentSongImage">
+            <img src="{{song.albumImg}}">
+          </div>
+          <div class="trackInfo">
+            <p class='trackTitle'>{{song.trackName}}</p>
+            <p class='albumTitle'>{{song.albumName}}</p>
+            <p class='artistTitle'>{{song.artistName}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="tracks" *ngIf="trackGot">
-    <div class="songs">
-      <ol>
-        <li *ngFor='let track of trackInfo.track'>{{track.strTrack}}</li>
-      </ol>
+  <div class="row">
+  <div class="col">
+    <label for="artist">Artist Name:</label>
+    <input type="text" class="form-control" #artist>
+    <button type="button" (click)='getArtist(artist.value)' class="btn btn-primary">Find Artist</button>
+    <div *ngIf='trackGot'><button type="button" (click)='backToAlbums()' class="btn btn-warning">Back to Albums</button></div>
+    <div *ngIf="albumGot" class="albums-holder">
+      <h3>Click on an album to see it's songs</h3>
+      <div class="albums">
+        <div class="card album" *ngFor="let album of artistInfo.album" (click)="getTracks(album.idAlbum)">
+          <img class="card-img-top" src="{{album.strAlbumThumb}}" alt="{{album.strAlbumStripped}} Thumbnail">
+          <h4 style="z-index: 10;">{{album.strAlbumStripped}}</h4>
+          <!-- <p>{{album.idAlbum}}</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="tracks" *ngIf="trackGot">
+      <div class="songs">
+        <ol>
+          <li *ngFor='let track of trackInfo.track' (click)="addToPlaylist(track.strTrack, track.strAlbum, track.strArtist, track.idAlbum)">{{track.strTrack}}</li>
+        </ol>
+      </div>
     </div>
   </div>
+  <div class="col-md-3">
+    <p>Up Next:</p>
+    <ul *ngFor='let song of currentPlaylist; let i = index'>
+      <li *ngIf='i != 0'>{{song.trackName}}</li>
+    </ul>
+  </div>
+</div>
 </div>

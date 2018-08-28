@@ -1,3 +1,7 @@
+.albums-holder h3 {
+  text-align: center;
+}
+
 .albums {
   display: flex;
   flex-wrap: wrap;
@@ -20,4 +24,32 @@
 
 .btn {
   margin-top: 5px;
+}
+
+.playlist {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.playlist .card {
+  width: 100%;
+}
+
+.trackInfo {
+  line-height: 60%;
+  text-align: center;
+}
+
+.currentSong {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.currentSongImage {
+
+}
+
+.currentSongImage img {
+  width: 100px;
+  height: auto;
 }
