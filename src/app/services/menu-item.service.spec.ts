@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MenuItemService } from './menu.service';
+import { MenuItemService } from './menu-item.service';
 
 describe('MenuItemService', () => {
   beforeEach(() => {
