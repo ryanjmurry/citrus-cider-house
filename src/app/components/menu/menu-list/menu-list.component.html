@@ -1,3 +1,7 @@
-<p>
-  menu-list works!
-</p>
+<h1>Menu</h1>
+<div *ngFor="let menuItem of menuItems">
+  <app-menu-details [menuItem]="menuItem"></app-menu-details>
+</div>
+<div>
+  <button class="btn btn-danger" (click)="deleteMenuItems()">Delete All</button>
+</div>
