@@ -12,8 +12,8 @@ import { CommentsService} from '../../services/comments.service';
 export class SubscribeFormComponent implements OnInit {
 
   constructor(
-    private commentsService: CommentsService) {
-  }
+    private commentsService: CommentsService
+  ) {}
 
   ngOnInit() {
   }
@@ -22,4 +22,6 @@ export class SubscribeFormComponent implements OnInit {
     let newComment: UserComments = new UserComments(name, email, message)
     console.log(newComment);
   }
+
+
 }

@@ -11,8 +11,7 @@ export class CommentsService {
 
   constructor(private afDb: AngularFireDatabase) {
     afDb.list<UserComments>('/userComments').valueChanges().subscribe(console.log);
-    this.comments = afDb.list('userComments')
-    console.log(this.comments)
+    this.comments = afDb.list('/userComments')
   }
 
   getComments(){
