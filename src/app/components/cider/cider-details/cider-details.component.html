@@ -1,3 +1,19 @@
-<p>
-  cider-details works!
-</p>
+<div *ngIf="cider">
+  <div>
+    <label>Name: </label> {{cider.name}}
+  </div>
+  <div>
+    <label>Image: </label> {{cider.image}}
+  </div>
+  <div>
+    <label>ABV: </label> {{cider.abv}}
+  </div>
+  <div>
+    <label>Titratable Acidity: </label> {{cider.acidity}}
+  </div>
+  <div>
+    <label>Brix: </label> {{cider.brix}}
+  </div>
+
+  <span class="button btn-danger" (click)="deleteCider()">Delete</span>
+</div>
