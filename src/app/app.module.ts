@@ -22,6 +22,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
 import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -46,6 +48,8 @@ export const firebaseConfig = {
     MenuListComponent,
     MenuDetailsComponent,
     MenuCreateComponent,
+    AdminComponent,
+    PublishCommentComponent,
   ],
   imports: [
     BrowserModule,
