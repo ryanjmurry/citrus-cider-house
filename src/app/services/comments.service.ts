@@ -7,11 +7,17 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class CommentsService {
 
-  comments: AngularFireList<any[]>;
+  comments: AngularFireList<UserComments> = null;
 
   constructor(private afDb: AngularFireDatabase) {
     afDb.list<UserComments>('/userComments').valueChanges().subscribe(console.log);
     this.comments = afDb.list('/userComments')
+    console.log(this.comments)
+    
+  }
+
+  saveComment(userComment: UserComments): void{
+    this.comments.push(userComment);
   }
 
   getComments(){
