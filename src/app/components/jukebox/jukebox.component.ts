@@ -19,7 +19,6 @@ export class JukeboxComponent implements OnInit {
   trackGot: boolean = false;
   ngOnInit() {
     this.jukebox.getSongsList().valueChanges().subscribe(playlist => {this.currentPlaylist = playlist});
-    console.log(typeof this.currentPlaylist)
   }
 
   getArtist(artist: string){
@@ -31,7 +30,7 @@ export class JukeboxComponent implements OnInit {
 
   getTracks(albumId: string) {
     this.jukebox.getAlbumTracks(albumId)
-      .subscribe(trackData => {this.trackInfo = trackData.json()
+      .subscribe(trackData => {this.trackInfo = trackData.json().track
         this.albumGot = false;
         this.trackGot = true;
       })
@@ -48,9 +47,12 @@ export class JukeboxComponent implements OnInit {
       .subscribe(albumData => {albumImg = albumData.json().album[0].strAlbumThumb
         let newSong = new JukeboxSong(trackName, albumName, artistName, albumImg);
         this.jukebox.addSong(newSong);
-        this.currentPlaylist = this.jukebox.getSongsList();
-        console.log(typeof this.currentPlaylist)
+        this.currentPlaylist = this.jukebox.getSongsList().valueChanges().subscribe(playlist => {this.currentPlaylist = playlist});
       })
+  }
+
+  finishSong(){
+    this.jukebox.finishSong();
   }
 
 }

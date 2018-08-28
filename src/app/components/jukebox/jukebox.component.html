@@ -19,6 +19,7 @@
           </div>
         </div>
       </div>
+        <button type="button" name="button" (click)="finishSong()">Next Song</button>
     </div>
   </div>
   <div class="row">
@@ -40,7 +41,7 @@
     <div class="tracks" *ngIf="trackGot">
       <div class="songs">
         <ol>
-          <li *ngFor='let track of trackInfo.track' (click)="addToPlaylist(track.strTrack, track.strAlbum, track.strArtist, track.idAlbum)">{{track.strTrack}}</li>
+          <li *ngFor='let track of trackInfo' (click)="addToPlaylist(track.strTrack, track.strAlbum, track.strArtist, track.idAlbum)">{{track.strTrack}}</li>
         </ol>
       </div>
     </div>
