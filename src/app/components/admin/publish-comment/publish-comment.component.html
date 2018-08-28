@@ -1,9 +1,11 @@
-<div *ngFor="let comment of comments">
-  <div class="card mb-3" style="max-width: 18rem;">
+<div class="row">
+  <div class="col-auto" *ngFor="let comment of comments">
+    <div class="card mb-3" style="max-width: 18rem;">
     <div class="card-header">{{comment.name}}</div>
     <div class="card-body">
       <p class="card-text">{{comment.message}}</p>
     </div>
     <div class="card-footer">posted on {{comment.timestamp.value | date}}</div>
+  </div>
   </div>
 </div>
