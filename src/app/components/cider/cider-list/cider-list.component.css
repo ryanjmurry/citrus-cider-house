@@ -1,6 +1,12 @@
 .cider-list {
-  position: relative;
-  left: 20%;
-  width: 60%;
-  right: 20%;
+  padding: 25px 200px 50px 200px;
+  background: #ffdeb8;
+  border-top: 7px #e76c1f solid;
+  border-bottom: 7px #e76c1f solid;
+}
+
+.cider-list div {
+  display: inline-block;
+  margin: 0 5px;
+  border: 1px solid black;
 }
