@@ -4,6 +4,6 @@
     <div class="card-body">
       <p class="card-text">{{comment.message}}</p>
     </div>
-    <div class="card-footer">{{comment.timestamp.value}}</div>
+    <div class="card-footer">posted on {{comment.timestamp.value | date}}</div>
   </div>
 </div>
