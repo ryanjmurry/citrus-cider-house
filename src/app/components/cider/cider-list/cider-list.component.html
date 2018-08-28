@@ -1,0 +1,7 @@
+<h1>Ciders</h1>
+<div *ngFor="let cider of ciders">
+  <app-cider-details [cider]="cider"></app-cider-details>
+</div>
+<div>
+  <button class="btn btn-danger" (click)="deleteCiders()">Delete all</button>
+</div>
