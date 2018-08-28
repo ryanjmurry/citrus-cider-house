@@ -1,5 +1,6 @@
 export class UserComments {
-    publish: string = 'unpublished'
+    publish: string = 'unpublished';
+    key:string;
   constructor(
     public name:string, 
     public email:string, 
