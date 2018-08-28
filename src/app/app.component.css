@@ -1,10 +1,13 @@
-.wrapper {
-	padding: 0 0 250px 0;
-}
+.parallax {
+	/* The image used */
+	background-image: url("../assets/citrus-background.jpg");
 
-.citrus-background {
-	height: 100%;
-	width: 100%;
-	opacity: 0.5;
-	z-index: 0;
+	/* Set a specific height */
+	min-height: 350px; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
