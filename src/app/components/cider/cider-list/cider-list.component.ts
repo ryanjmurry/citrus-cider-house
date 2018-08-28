@@ -14,17 +14,17 @@ export class CiderListComponent implements OnInit {
   constructor(private ciderService: CiderService) { }
 
   ngOnInit() {
-    this.ciderService.getCidersList();
+    this.getCidersList();
   }
 
   getCidersList() {
     this.ciderService.getCidersList().snapshotChanges().pipe(
       map(changes => 
-        changes.map(c => ({key: c.payload.key, ...c.payload.val()}))
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )
     ).subscribe(ciders => {
       this.ciders = ciders;
-    })
+    });
   }
 
   deleteCiders() {
