@@ -1,3 +1,4 @@
-<p>
-  publish-comment works!
+<p *ngFor="let comment of comments">
+  {{comment.name}}
 </p>
+<span (click)="consoleLog()">Click Me</span>
