@@ -51,8 +51,4 @@ export class JukeboxComponent implements OnInit {
       })
   }
 
-  finishSong(){
-    this.jukebox.finishSong();
-  }
-
 }
