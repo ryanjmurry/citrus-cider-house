@@ -1,13 +1,16 @@
 .cider-list {
-  padding: 25px 200px 50px 200px;
-  background-image: linear-gradient(#e2fce180, rgb(255, 233, 188));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  width: 75%;
+  margin: 10px auto;
+  background-image: linear-gradient(#e2fce199, rgb(255, 180, 27));
 }
 
 .cider-list div {
   display: inline-block;
   margin: 0 15px;
   line-height: 21px;
-  width: 200px;
 }
 
 .cider-list h1 {
@@ -16,6 +19,11 @@
   color: #840000;
   text-shadow: #020202 0.5px 0.5px 1px;
   display: inline-block;
+  margin: 0 auto;
+}
+
+.cider-detail-container {
+  width: 100%;
   margin: 0 auto;
 }
 
