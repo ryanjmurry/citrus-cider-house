@@ -1,2 +1,25 @@
-<app-publish-comment></app-publish-comment>
-<app-user-list></app-user-list>
+<button class="btn btn-dark" (click)="show('users')">Users</button>
+<button class="btn btn-dark" (click)="show('comments')">Comments</button>
+<button class="btn btn-dark" (click)="show('ciders')">Ciders</button>
+<button class="btn btn-dark" (click)="show('menu')">Menu</button>
+<button class="btn btn-dark" (click)="show('merch')">Merch</button>
+
+<div *ngIf="currentView === 'users'">
+  <app-admin-users></app-admin-users>
+</div>
+<div *ngIf="currentView === 'comments'">
+  <app-admin-comments></app-admin-comments>
+</div>
+<div *ngIf="currentView === 'ciders'">
+  <app-admin-ciders></app-admin-ciders>
+</div>
+<div *ngIf="currentView === 'menu'">
+  <app-admin-menu></app-admin-menu>
+</div>
+<div *ngIf="currentView === 'merch'">
+  <app-admin-merch></app-admin-merch>
+</div>
+
+
+<!-- <app-publish-comment></app-publish-comment>
+<app-user-list></app-user-list> -->
