@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { MenuItemService } from '../../../../services/menu-item.service';
 
 @Component({
   selector: 'app-admin-menu-list',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminMenuListComponent implements OnInit {
 
-  constructor() { }
+  menuItems: any;
+
+  constructor(private menuItemService: MenuItemService) { }
 
   ngOnInit() {
+    this.getMenuItemsList();
   }
 
+  getMenuItemsList() {
+    this.menuItemService.getMenuItemsList().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() })) 
+      )
+    ).subscribe(menuItems => {
+      this.menuItems = menuItems;
+    });
+  }
+
+  deleteMenuItems() {
+    this.menuItemService.deleteAll();
+  }
 }
