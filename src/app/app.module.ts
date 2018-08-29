@@ -32,6 +32,8 @@ import { PublishCommentComponent } from './components/admin/publish-comment/publ
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
+import { UserListComponent } from './components/admin/user-list/user-list.component';
+import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -61,6 +63,8 @@ export const firebaseConfig = {
     AdminComponent,
     PublishCommentComponent,
     CommentsCarouselComponent,
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -34,10 +34,8 @@ export class CiderService {
   deleteAll(): void {
     this.cidersRef.remove().catch(error => this.handleError(error));
   }
-
   
-
   private handleError(error) {
     console.log(error);
-  }
+  } 
 }
