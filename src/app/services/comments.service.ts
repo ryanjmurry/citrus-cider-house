@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { UserComments } from '../models/user-comments';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { UserComments } from '../models/user-comments';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +22,18 @@ export class CommentsService {
     return this.comments;
   }
 
-  // getComment(): AngularFireList<Comment> {
-  //   return Comment
+  publishComment(comment): void {
+    console.log(comment)
+    let selectedComment = this.afDb.object('userComment/' + comment.key);
+    selectedComment.update({publish : true}).catch(error => this.handleError(error));
+  }
+
+  // unpublishComment(comment): void {
+  //   comment.update({publish : false}).catch(error => this.handleError(error));
   // }
+
+  private handleError(error) {
+    console.log(error);
+  }
 }
 
