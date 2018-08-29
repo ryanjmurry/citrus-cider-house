@@ -11,6 +11,8 @@ import { map } from 'rxjs/operators';
 export class PublishCommentComponent implements OnInit {
 
   comments: any;
+  marked = false;
+  theCheckbox = false;
 
   constructor(private commentsService: CommentsService) { }
 
@@ -26,6 +28,11 @@ export class PublishCommentComponent implements OnInit {
     ).subscribe(comments => {
       this.comments = comments;
     });
+  }
+
+  togglePublish(event){
+      this.marked= event.target.checked;
+      console.log(this.comments)
   }
 
 }
