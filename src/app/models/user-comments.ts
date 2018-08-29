@@ -3,7 +3,7 @@ import { Timestamp } from "rxjs/internal/operators/timestamp";
 
 export class UserComments {
     timestamp = new Timestamp(Date.now(), null)
-    publish: string = 'unpublished';
+    publish:boolean = false;
     key:string;
   constructor(
     public name:string, 
