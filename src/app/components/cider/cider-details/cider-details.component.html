@@ -1,21 +1,12 @@
 <div *ngIf="cider">
-  <div>
-    <label>Name: </label> {{cider.name}}
-  </div>
-  <div>
-    <label>Image: </label> {{cider.image}}
-  </div>
-  <div>
-    <label>ABV: </label> {{cider.abv}}
-  </div>
-  <div>
-    <label>Titratable Acidity: </label> {{cider.ta}}
-  </div>
-  <div>
-    <label>Brix: </label> {{cider.brix}}
-  </div>
-
-  <span class="btn btn-sm btn-danger" (click)="deleteCider()">Delete</span>
+    <span class="name">{{cider.name}}</span>
+    <div class="cider-details">
+      <label>Image: </label> <span class="detail">{{cider.image}}</span>
+      <label>ABV: </label> <span class="detail">{{cider.abv}}</span>
+      <label>TA: </label> <span class="detail">{{cider.ta}}</span>
+      <label>Brix: </label> <span class="detail">{{cider.brix}}</span>
+    </div>
+  <span class="btn btn-sm btn-danger delete-cider-button" (click)="deleteCider()">Delete</span>
   <span class="btn btn-sm btn-info" (click)="showUpdateForm()">Update</span>
 </div>
 

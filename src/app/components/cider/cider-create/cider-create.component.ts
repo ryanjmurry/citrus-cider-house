@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cider } from '../../../models/cider';
+import { map } from 'rxjs/operators';
 import { CiderService } from '../../../services/cider.service';
 
 @Component({
@@ -10,11 +11,23 @@ import { CiderService } from '../../../services/cider.service';
 export class CiderCreateComponent implements OnInit {
 
   cider: Cider = new Cider();
+  ciders: any;
   submitted = false;
 
   constructor(private ciderService: CiderService) { }
 
   ngOnInit() {
+    this.getCidersList();
+  }
+
+  getCidersList() {
+    this.ciderService.getCidersList().snapshotChanges().pipe(
+      map(changes => 
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(ciders => {
+      this.ciders = ciders;
+    });
   }
 
   newCider(): void {
@@ -24,7 +37,6 @@ export class CiderCreateComponent implements OnInit {
 
   save() {
     this.ciderService.createCider(this.cider);
-    this.cider = new Cider();
   }
 
   onSubmit() {
