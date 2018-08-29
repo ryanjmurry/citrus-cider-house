@@ -3,7 +3,7 @@
   border-radius: 10px;
   background: #3c1406e6;
   box-shadow: 2px 2px 5px black;
-  position: fixed;
+  /* position: fixed; */
   left: 30%;
   top: 160px;
 }
