@@ -1,0 +1,12 @@
+.cider-list {
+  padding: 25px 200px 50px 200px;
+  background: #F5FFFA;
+  border-top: 7px #21b61f solid;
+  border-bottom: 7px #037800 solid;
+}
+
+.cider-list div {
+  display: inline-block;
+  margin: 0 5px;
+  border: 1px solid black;
+}

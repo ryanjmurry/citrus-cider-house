@@ -1,0 +1,39 @@
+#lemon-logo {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    margin: 0 0 0 -62px;
+    z-index: 999;
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+    height: 95px;
+    background: #F5FFFA;
+    border-bottom: 4px solid #037800;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: rgb(223, 178, 60);
+    font-style: italic;
+}
+
+.nav-link:hover {
+    color: rgb(230, 208, 17); 
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    line-height: 30px;
+    color: darkgreen;
+}

@@ -1,1 +1,12 @@
+<app-header></app-header>
+<div class="background-apple"></div>
 <router-outlet></router-outlet>
+<div *ngIf="isLoggedIn">
+  <a>{{userName}}</a>
+  <button class="btn btn-primary" (click)="logout()">Log out</button>
+</div>
+<div *ngIf ="!isLoggedIn">
+  <button class="btn btn-primary" (click)="login()">Log in</button>
+</div>
+<div class="background-citrus"></div>
+<app-footer></app-footer>  

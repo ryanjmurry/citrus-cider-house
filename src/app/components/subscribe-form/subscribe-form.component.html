@@ -1,0 +1,23 @@
+<div class="subscribe-container">
+  <form>
+    <div class="header-content">
+      <h2>Drop us a comment</h2>
+      <p>If you had a great experience, drop us a comment below and let us know!</p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Name" #name>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Email" #email>
+      </div>
+    </div>
+    <div class="commentArea">
+      <textarea class="form-control" id="commentArea" rows="3" placeholder="Message" #message></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="submitComment(name.value, email.value, message.value); name.value=''; email.value=''; message.value='';">Send</button>
+  </form>
+</div>
+

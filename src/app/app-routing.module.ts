@@ -5,6 +5,10 @@ import { AboutComponent } from './components/about/about.component';
 import { CiderComponent } from './components/cider/cider.component';
 import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
 import { JukeboxComponent } from './components/jukebox/jukebox.component';
+import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminGuard } from './guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -26,6 +30,19 @@ const routes: Routes = [
   {
     path: 'jukebox',
     component: JukeboxComponent
+  },
+  {
+    path: 'menu',
+    component: MenuComponent
+  },
+  {
+    path: 'menu/add',
+    component: MenuCreateComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AdminGuard]
   }
 ];
 
