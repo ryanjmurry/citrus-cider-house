@@ -10,17 +10,20 @@ export class CommentsService {
   comments: AngularFireList<UserComments> = null;
 
   constructor(private afDb: AngularFireDatabase) {
-    // afDb.list<UserComments>('/userComments').valueChanges().subscribe();
     this.comments = afDb.list('/userComments')
-    console.log(this.comments)
-    
+
   }
 
-  saveComment(userComment: UserComments): void{
+  saveComment(userComment: UserComments): void {
     this.comments.push(userComment);
   }
 
   getComments(): AngularFireList<UserComments> {
     return this.comments;
+
   }
+
+  // getComment(): AngularFireList<Comment> {
+  //   return Comment
+  // }
 }
