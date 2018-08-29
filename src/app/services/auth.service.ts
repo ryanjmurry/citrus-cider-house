@@ -1,27 +1,3 @@
-// import { Injectable } from '@angular/core';
-// import { AngularFireAuth } from 'angularfire2/auth';
-// import * as firebase from 'firebase/app';
-// import { Observable } from 'rxjs';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthService {
-//   user: Observable<firebase.User>;
-
-//   constructor(public afAuth: AngularFireAuth) { 
-//     this.user = afAuth.authState;
-//   }
-
-//   login() {
-//     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-//   }
-
-//   logout() {
-//     this.afAuth.auth.signOut();
-//   }
-// }
-
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase/app';
@@ -76,33 +52,5 @@ export class AuthService {
     }
     return userRef.set(data, { merge: true })
   }
-
-  canRead(user: User): boolean {
-    const allowed = ['admin', 'subscriber']
-    return this.checkAuthorization(user, allowed)
-  }
   
-  canEdit(user: User): boolean {
-    const allowed = ['admin']
-    return this.checkAuthorization(user, allowed)
-  }
-  
-  canDelete(user: User): boolean {
-    const allowed = ['admin']
-    return this.checkAuthorization(user, allowed)
-  }
-  
-  
-  
-  // determines if user has matching role
-  private checkAuthorization(user: User, allowedRoles: string[]): boolean {
-    if (!user) return false
-    for (const role of allowedRoles) {
-      if ( user.roles[role] ) {
-        return true
-      }
-    }
-    return false
-  }
 }
-
