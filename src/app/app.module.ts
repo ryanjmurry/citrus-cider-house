@@ -27,13 +27,13 @@ import { MenuListComponent } from './components/menu/menu-list/menu-list.compone
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
 import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
+import { PublishCommentComponent } from './components/admin/admin-comments/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
-import { UserListComponent } from './components/admin/user-list/user-list.component';
-import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
+import { UserListComponent } from './components/admin/admin-users/user-list/user-list.component';
+import { UserDetailsComponent } from './components/admin/admin-users/user-details/user-details.component';
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
 import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
