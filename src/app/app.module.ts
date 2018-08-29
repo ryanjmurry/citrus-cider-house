@@ -9,7 +9,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
