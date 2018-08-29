@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth'
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,11 +26,13 @@ import { MenuDetailsComponent } from './components/menu/menu-details/menu-detail
 import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
+import { AuthService } from './services/auth.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
+  projectId: masterFirebaseConfig.projectId,
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
@@ -60,9 +63,10 @@ export const firebaseConfig = {
     Angular2FontawesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
