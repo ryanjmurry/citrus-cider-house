@@ -8,17 +8,25 @@
   z-index: 1;
 }
 
+.row {
+  margin-bottom: 6px;
+  padding: 2px;
+}
+
 .column {
   border: 1px solid rgba(97, 131, 138, .1);
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
   z-index: 1;
+  background-position: center;
+	background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .start {
   z-index: 10;
   position: relative;
-  right: -135px;
+  right: -250px;
   top: -275px;
 }
