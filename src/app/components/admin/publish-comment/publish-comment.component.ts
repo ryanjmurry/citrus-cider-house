@@ -30,9 +30,13 @@ export class PublishCommentComponent implements OnInit {
     });
   }
 
-  togglePublish(event){
-      this.marked= event.target.checked;
-      console.log(this.comments)
+  togglePublish(event, key){
+    if (this.comments[4].key == key){
+      console.log(this.comments[0].key)
+      console.log(this.comments[4].key)
+      this.marked = event.target.checked;
+      // console.log(event.target.checked)
+    }
   }
 
 }
