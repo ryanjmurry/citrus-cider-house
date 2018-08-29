@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row game-body">
+    <div class="col-md-6">
+      <div class="row board" *ngFor="let column of board; let i = index;">
+        <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index"></div>
+      </div>
+      <button *ngIf="isGameStart == false" type="button" class="btn btn-primary start" (click)='startGame()'>Start Game</button>
+    </div>
+    <div class="col-md-6">
+      <h4>Catch the droplets!</h4>
+      <h5>Move your cup with the left and right arrow keys.</h5>
+      <p>Droplets Caught: {{score}}</p>
+      <p>Droplets Missed: {{misses}}</p>
+      <button *ngIf="isGameStart" type="button" class="btn btn-danger" (click)='restartGame()'>Restart Game</button>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ import { MenuCreateComponent } from './components/menu/menu-create/menu-create.c
 import { MenuComponent } from './components/menu/menu.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminGuard } from './guards/admin.guard';
+import { GameComponent } from './components/game/game.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     canActivate: [AdminGuard]
+  },
+  {
+    path: 'lemonparty',
+    component: GameComponent
   }
 ];
 

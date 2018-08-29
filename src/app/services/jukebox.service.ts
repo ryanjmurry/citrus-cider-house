@@ -26,10 +26,6 @@ export class JukeboxService {
     return this.songsRef;
   }
 
-  finishSong() {
-    let songToFinish = this.db.list(this.dbPath, ref => ref.orderByKey().limitToFirst(1)).remove();
-  }
-
   getArtistInfo(artist: string) {
     return this.http.get(`https://theaudiodb.com/api/v1/json/${jukeboxAPIKey}/searchalbum.php?s=${artist}`);
   }

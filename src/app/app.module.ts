@@ -30,6 +30,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
+import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
@@ -61,6 +62,7 @@ export const firebaseConfig = {
     MenuCreateComponent,
     AdminComponent,
     PublishCommentComponent,
+    GameComponent,
     CommentsCarouselComponent,
     UserListComponent,
     UserDetailsComponent
