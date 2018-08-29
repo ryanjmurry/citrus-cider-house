@@ -15,7 +15,6 @@ export class AppComponent {
 
   constructor(public authService: AuthService) {
     this.authService.user.subscribe(user => {
-      console.log(user);
       if (user == null) {
         this.isLoggedIn = false;
       } else {
