@@ -1,10 +1,11 @@
 .subscribe-container {
   padding: 20px;
-  width: 40%;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 10px;
-  background: grey;
+  background: #3c1406e6;
+  box-shadow: 2px 2px 5px black;
+  position: fixed;
+  left: 30%;
+  top: 160px;
 }
 
 .header-content {

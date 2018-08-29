@@ -1,10 +1,18 @@
-.wrapper {
-	padding: 0 0 250px 0;
+.background-apple {
+	background-image: url('../assets/apple-background.jpg');
+	height: 500px; 
+	width: 100%;
+	background-attachment: fixed;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.citrus-background {
-	height: 100%;
-	width: 100%;
-	opacity: 0.5;
-	z-index: 0;
+.background-citrus {
+	background-image: url('../assets/citrus-background.jpg');
+	height: 500px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
