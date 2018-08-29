@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,19 @@ export class HeaderComponent implements OnInit {
   @Output() userLogout = new EventEmitter;
   @Input() isLoggedIn;
 
-  constructor() { }
-  
+  constructor(private route: Router) { }
+
   ngOnInit() {
+  }
+
+  clicked: number = 0;
+
+  startGame(){
+    if (this.clicked === 7) {
+      this.route.navigate(['lemonparty'])
+    } else {
+      this.clicked ++
+    }
   }
 
   logout() {
@@ -22,4 +33,5 @@ export class HeaderComponent implements OnInit {
   login() {
     this.userLogin.emit();
   }
+
 }

@@ -1,7 +1,9 @@
 <div class="cider-list">
   <h1>Ciders</h1> <button class="btn btn-sm btn-warning delete-all" (click)="deleteCiders()">Delete all</button>
   <hr>
-  <div *ngFor="let cider of ciders">
-    <app-cider-details [cider]="cider"></app-cider-details>
+  <div class="cider-detail-container">
+    <div *ngFor="let cider of ciders">
+      <app-cider-details [cider]="cider"></app-cider-details>
+    </div>
   </div>
 </div>

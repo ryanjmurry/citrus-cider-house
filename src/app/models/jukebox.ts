@@ -3,7 +3,7 @@ export class JukeboxSong {
   public trackName: string,
   public albumName: string,
   public artistName: string,
-  public albumImg: string
+  public albumImg: string,
   ) {}
 
 }
