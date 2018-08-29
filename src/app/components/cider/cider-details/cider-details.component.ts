@@ -37,23 +37,4 @@ export class CiderDetailsComponent implements OnInit {
       brix: updateBrix
     });
   }
-
-  // onSubmit() {
-  //   this.updateIsActive = false;
-  //   console.log(this.cider);
-  //   this.save();
-  // }
-
-  // save() {
-  //   this.ciderService.updateCider(this.cider.key, {
-  //     name: this.cider.name,
-  //     image: this.cider.imagePath,
-  //     abv: this.cider.abv,
-  //     ta: this.cider.ta,
-  //     brix: this.cider.brix
-  //   });
-  // }
-
-
-
 }
