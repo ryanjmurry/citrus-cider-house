@@ -1,12 +1,30 @@
 .cider-list {
   padding: 25px 200px 50px 200px;
-  background: #F5FFFA;
-  border-top: 7px #21b61f solid;
-  border-bottom: 7px #037800 solid;
+  background-image: linear-gradient(#e2fce180, rgb(255, 233, 188));
 }
 
 .cider-list div {
   display: inline-block;
-  margin: 0 5px;
-  border: 1px solid black;
+  margin: 0 15px;
+  line-height: 21px;
+  width: 200px;
+}
+
+.cider-list h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 58px;
+  color: #840000;
+  text-shadow: #020202 0.5px 0.5px 1px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+hr {
+  border-top: 4px solid rgb(132, 0, 0);
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.delete-all {
+  margin: 0 0 15px 40px;
 }
