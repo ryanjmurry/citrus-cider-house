@@ -3,18 +3,24 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">email</th>
+      <th scope="col">Email</th>
       <th scope="col">Created</th>
       <th scope="col">Publish</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let comment of comments; let i=index">
+    <tr *ngFor="let comment of comments; let i=index" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
       <th scope="row">{{i}}</th>
       <td>{{comment.name}}</td>
       <td>{{comment.email}}</td>
       <td>{{comment.timestamp.value | date:'short'}}</td>
       <td><input class="form-check-input" type="checkbox" value="" class="publish" [checked]="this.comment.publish" (change)="togglePublish($event, this.comment)"></td>
+          <td id="collapseExample" [ngbCollapse]="isCollapsed">
+            <p>{{comment.message}}</p>
+          </td>
     </tr>
   </tbody>
 </table>
+
+<p>
+</p>

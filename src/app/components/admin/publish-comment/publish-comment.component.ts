@@ -13,6 +13,7 @@ export class PublishCommentComponent implements OnInit {
   comments: any;
   marked = false;
   checked: boolean;
+  public isCollapsed = true;
 
   constructor(private commentsService: CommentsService) { }
 
