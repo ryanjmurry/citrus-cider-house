@@ -1,3 +1,5 @@
-<p>
-  game works!
-</p>
+<div class="container">
+  <div class="row" *ngFor="let column of board; let i = index;">
+    <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index"></div>
+  </div>
+</div>
