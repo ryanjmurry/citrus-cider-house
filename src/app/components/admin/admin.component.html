@@ -1,2 +1,22 @@
+<button class="btn btn-dark" (click)="show('users')">Users</button>
+<button class="btn btn-dark" (click)="show('comments')">Comments</button>
+<button class="btn btn-dark" (click)="show('ciders')">Ciders</button>
+<button class="btn btn-dark" (click)="show('merch')">Merch</button>
+<button class="btn btn-dark" (click)="show('food')">Food</button>
+<div *ngIf="currentAdminView === 'users'">
+  <app-admin-users></app-admin-users>
+</div>
+<div *ngIf="currentAdminView === 'comments'">
+  <app-admin-comments></app-admin-comments>
+</div>
+<div *ngIf="currentAdminView === 'ciders'">
+  <app-admin-ciders></app-admin-ciders>
+</div>
+<div *ngIf="currentAdminView === 'merch'">
+  <app-admin-merch></app-admin-merch>
+</div>
+<div *ngIf="currentAdminView === 'food'">
+  <app-admin-food></app-admin-food>
+</div>
 <app-publish-comment></app-publish-comment>
 <app-user-list></app-user-list>

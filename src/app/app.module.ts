@@ -34,6 +34,12 @@ import { AdminGuard } from './guards/admin.guard';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
+import { UsersComponent } from './components/admin/users/users.component';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
+import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
+import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
+import { AdminMerchComponent } from './components/admin/admin-merch/admin-merch.component';
+import { AdminFoodComponent } from './components/admin/admin-food/admin-food.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -64,7 +70,13 @@ export const firebaseConfig = {
     PublishCommentComponent,
     CommentsCarouselComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UsersComponent,
+    AdminUsersComponent,
+    AdminCommentsComponent,
+    AdminCidersComponent,
+    AdminMerchComponent,
+    AdminFoodComponent
   ],
   imports: [
     BrowserModule,
