@@ -3,13 +3,19 @@ footer {
     height: 60px;
     bottom: 0px;
     width: 100%;
-    background: #F5FFFA;
-    border-top: 7px solid #037800;
-    z-index: 999;
+    background: #FBF7E9;
+    border-top: 3px solid #e1a301;
+    font-weight: bold;
 }
 
 .footer-link {
-    position: relative;
-    top: 15px;
-    left: 40px;
+    color: rgb(223, 178, 60);
+    font-size: 20px;
+    bottom: 15px;
+    left: 20px;
+    position: fixed;
+}
+
+.footer-link:hover {
+    color: rgb(230, 208, 17); 
 }
