@@ -37,5 +37,4 @@ export class PublishCommentComponent implements OnInit {
       this.commentsService.unpublishComment(comment)
     }
   }
-
 }
