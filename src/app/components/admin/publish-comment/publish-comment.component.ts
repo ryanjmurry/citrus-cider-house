@@ -31,6 +31,7 @@ export class PublishCommentComponent implements OnInit {
   }
 
   togglePublish(event, key){
+    console.log(this.commentsService)
     if (this.comments[4].key == key){
       console.log(this.comments[0].key)
       console.log(this.comments[4].key)
