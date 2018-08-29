@@ -1,18 +1,4 @@
-.background-apple {
-	background-image: url('../assets/apple-background.jpg');
-	height: 1000px; 
-	width: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.background-citrus {
-	background-image: url('../assets/citrus-background.jpg');
-	height: 300px; 
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+.wrapper {
+	padding-top: 100px;
+	padding-bottom: 150px;
 }
