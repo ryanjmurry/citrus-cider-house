@@ -1,25 +1,10 @@
 <div class="carouselContainer">
   <ngb-carousel>
-    <ng-template ngbSlide>
-      <p>This is a paragraph</p>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <p>This is paragraph 2</p>
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <p>This is paragraph 3</p>
-      <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </ng-template>
+    <div *ngFor="let comment of comments">
+      <ng-template ngbSlide *ngIf="this.comment.publish == true">
+        <p>{{comment.message}}</p>
+        <p>{{comment.name}}</p>
+      </ng-template>
+    </div>
   </ngb-carousel>
 </div>

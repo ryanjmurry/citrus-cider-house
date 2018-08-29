@@ -5,7 +5,7 @@
     <div class="card-body">
       <p class="card-text">{{comment.message}}</p>
       <input class="form-check-input" type="checkbox" value="" class="publish" (change)="togglePublish($event, this.comment)">
-       Comment is <span *ngIf="this.comment.publish == true">published</span><span *ngIf="this.comment.publish ==  false">unpublished</span>
+       Comment is <span *ngIf="this.comment.publish == true">published</span><span *ngIf="this.comment.publish == false">unpublished</span>
       <span class="checkmark"></span>
     </div>
     <div class="card-footer">posted on {{comment.timestamp.value | date:'short'}}</div>

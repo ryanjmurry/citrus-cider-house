@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserComments } from "../../models/user-comments";
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { CommentsService } from "../../services/comments.service";
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-comments-carousel',
@@ -10,7 +11,9 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class CommentsCarouselComponent implements OnInit {
 
-  constructor(config: NgbCarouselConfig) {
+  comments: any;
+
+  constructor(config: NgbCarouselConfig, private commentsService: CommentsService) {
     // customize default values of carousels used by this component tree
     config.interval = 5000;
     config.wrap = true;
@@ -20,6 +23,21 @@ export class CommentsCarouselComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getComments()
+  }
+
+  getComments() {
+    this.commentsService.getComments().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(comments => {
+      this.comments = comments;
+    });
+  }
+
+  consolelog() {
+    console.log(this.comments)
   }
 
 }
