@@ -4,6 +4,15 @@
   background: #ff4c0de6;
   box-shadow: 2px 2px 5px black;
   width: 50%;
-  margin: 10px auto;
   color: white;
+  margin: 10px auto;
 }
+
+img {
+  width: 100%;
+}
+
+.card {
+  color: black;
+}
+
