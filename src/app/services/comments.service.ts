@@ -24,13 +24,15 @@ export class CommentsService {
 
   publishComment(comment): void {
     console.log(comment)
-    let selectedComment = this.afDb.object('userComment/' + comment.key);
+    let selectedComment = this.afDb.object('userComments/' + comment.key);
     selectedComment.update({publish : true}).catch(error => this.handleError(error));
   }
 
-  // unpublishComment(comment): void {
-  //   comment.update({publish : false}).catch(error => this.handleError(error));
-  // }
+  unpublishComment(comment): void {
+    console.log(comment)
+    let selectedComment = this.afDb.object('userComments/' + comment.key);
+    selectedComment.update({ publish: false }).catch(error => this.handleError(error));
+  }
 
   private handleError(error) {
     console.log(error);
