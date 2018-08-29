@@ -12,12 +12,13 @@ export class PublishCommentComponent implements OnInit {
 
   comments: any;
   marked = false;
-  theCheckbox = false;
+  checked: boolean;
 
   constructor(private commentsService: CommentsService) { }
 
   ngOnInit() {
     this.getComments()
+    this.checked = this.comments.publish;
   }
 
   getComments() {
