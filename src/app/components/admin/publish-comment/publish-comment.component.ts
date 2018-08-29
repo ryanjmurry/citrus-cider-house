@@ -30,14 +30,11 @@ export class PublishCommentComponent implements OnInit {
     });
   }
 
-  togglePublish(event, key){
-    console.log(this.commentsService)
-    if (this.comments[4].key == key){
-      console.log(this.comments[0].key)
-      console.log(this.comments[4].key)
-      this.marked = event.target.checked;
-      // console.log(event.target.checked)
+  togglePublish(event, comment){
+    if (this.marked = event.target.checked) {
+      this.commentsService.publishComment(comment)
+    } else {
+      this.commentsService.unpublishComment(comment)
     }
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output() userLogin = new EventEmitter;
+  @Output() userLogout = new EventEmitter;
+  @Input() isLoggedIn;
 
   constructor(private route: Router) { }
 
@@ -21,6 +24,14 @@ export class HeaderComponent implements OnInit {
     } else {
       this.clicked ++
     }
+  }
+
+  logout() {
+    this.userLogout.emit();
+  }
+
+  login() {
+    this.userLogin.emit();
   }
 
 }

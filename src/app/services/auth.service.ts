@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
@@ -12,7 +11,7 @@ export class AuthService {
 
   user: Observable<User>;
 
-  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore,private router: Router) {
+  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {
       this.user = this.afAuth.authState.pipe(
         switchMap(user => {
           if (user) {
@@ -44,6 +43,8 @@ export class AuthService {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: User = {
       uid: user.uid,
+      displayName: user.displayName,
+      photoURL: user.photoURL,
       email: user.email,
       roles: {
         customer: true,

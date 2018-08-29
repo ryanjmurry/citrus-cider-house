@@ -7,7 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +31,9 @@ import { PublishCommentComponent } from './components/admin/publish-comment/publ
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
+import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
+import { UserListComponent } from './components/admin/user-list/user-list.component';
+import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -60,6 +63,9 @@ export const firebaseConfig = {
     AdminComponent,
     PublishCommentComponent,
     GameComponent,
+    CommentsCarouselComponent,
+    UserListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgbModule
   ],
   providers: [AuthService, AdminGuard],
   bootstrap: [AppComponent]

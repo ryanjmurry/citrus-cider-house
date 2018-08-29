@@ -1,0 +1,15 @@
+.carouselContainer {
+  background-color: grey;
+  padding: 10px 15px 0px 15px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+}
+
+.carouselName {
+  padding-bottom: 20px;
+  font-style: italic;
+}
