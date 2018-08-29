@@ -24,20 +24,12 @@ const routes: Routes = [
     component: CiderComponent
   },
   {
-    path: 'ciders/add',
-    component: CiderCreateComponent
-  },
-  {
     path: 'jukebox',
     component: JukeboxComponent
   },
   {
     path: 'menu',
     component: MenuComponent
-  },
-  {
-    path: 'menu/add',
-    component: MenuCreateComponent
   },
   {
     path: 'admin',
