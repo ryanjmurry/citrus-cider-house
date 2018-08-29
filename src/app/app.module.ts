@@ -30,6 +30,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
+import { GameComponent } from './components/game/game.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -58,6 +59,7 @@ export const firebaseConfig = {
     MenuCreateComponent,
     AdminComponent,
     PublishCommentComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
