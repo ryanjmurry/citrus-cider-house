@@ -103,16 +103,16 @@ export class GameComponent implements OnInit {
 
   setColors(col: number, row: number): string {
     if (this.isGameOver) {
-      return '#86B5BD'
+      return 'url(../assets/game-bg.svg)'
     } else if (this.droplet.x === row && this.droplet.y === col) {
-      return 'orange'
+      return 'url(../assets/drop.svg)'
     } else if (this.cup.x === row && this.cup.y === col) {
-      return '#336E7B'
+      return 'url(../assets/pint.svg)'
     } else if (this.board[col][row] === true) {
-      return '#86B5BD'
+      return 'url(../assets/game-bg.svg)'
     }
 
-    return '#86B5BD'
+    return 'url(../assets/game-bg.svg)'
   };
 
 }

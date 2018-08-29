@@ -12,7 +12,8 @@ export class PublishCommentComponent implements OnInit {
 
   comments: any;
   marked = false;
-  theCheckbox = false;
+  checked: boolean;
+  public isCollapsed = true;
 
   constructor(private commentsService: CommentsService) { }
 
