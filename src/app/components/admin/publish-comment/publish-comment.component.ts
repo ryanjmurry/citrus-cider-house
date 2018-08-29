@@ -18,7 +18,6 @@ export class PublishCommentComponent implements OnInit {
 
   ngOnInit() {
     this.getComments()
-    this.checked = this.comments.publish;
   }
 
   getComments() {

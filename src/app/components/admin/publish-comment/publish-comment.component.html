@@ -1,14 +1,20 @@
-<div class="row">
-  <div class="col-auto" *ngFor="let comment of comments">
-    <div class="card mb-3" style="max-width: 18rem;">
-    <div class="card-header">{{comment.name}}</div>
-    <div class="card-body">
-      <p class="card-text">{{comment.message}}</p>
-      <input class="form-check-input" type="checkbox" value="" class="publish" [checked]="this.comment.publish" (change)="togglePublish($event, this.comment)">
-       Comment is <span *ngIf="this.comment.publish == true">published</span><span *ngIf="this.comment.publish == false">unpublished</span>
-      <span class="checkmark"></span>
-    </div>
-    <div class="card-footer">posted on {{comment.timestamp.value | date:'short'}}</div>
-  </div>
-  </div>
-</div>
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">email</th>
+      <th scope="col">Created</th>
+      <th scope="col">Publish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comment of comments; let i=index">
+      <th scope="row">{{i}}</th>
+      <td>{{comment.name}}</td>
+      <td>{{comment.email}}</td>
+      <td>{{comment.timestamp.value | date:'short'}}</td>
+      <td><input class="form-check-input" type="checkbox" value="" class="publish" [checked]="this.comment.publish" (change)="togglePublish($event, this.comment)"></td>
+    </tr>
+  </tbody>
+</table>
