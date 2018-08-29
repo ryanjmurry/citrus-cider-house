@@ -34,6 +34,11 @@ import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
+import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
+import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
+import { AdminMerchComponent } from './components/admin/admin-merch/admin-merch.component';
+import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -65,7 +70,12 @@ export const firebaseConfig = {
     GameComponent,
     CommentsCarouselComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AdminUsersComponent,
+    AdminCidersComponent,
+    AdminCommentsComponent,
+    AdminMerchComponent,
+    AdminMenuComponent
   ],
   imports: [
     BrowserModule,
