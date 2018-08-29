@@ -1,0 +1,16 @@
+.cider-details {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+label {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'IM Fell English', serif;
+}
+
+.btn {
+  width: 50%;
+}
+
