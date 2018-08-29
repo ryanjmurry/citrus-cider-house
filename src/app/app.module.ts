@@ -27,6 +27,7 @@ import { MenuCreateComponent } from './components/menu/menu-create/menu-create.c
 import { AdminComponent } from './components/admin/admin.component';
 import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
+import { AdminGuard } from './guards/admin.guard';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -66,7 +67,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
