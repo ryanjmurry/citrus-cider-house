@@ -1,0 +1,9 @@
+.carouselContainer {
+  background-color: grey;
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
