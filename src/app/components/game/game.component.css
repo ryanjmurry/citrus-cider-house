@@ -1,5 +1,11 @@
-.row {
+.game-body {
+  margin-top: 10px;
+  padding: 10px;
+}
+ 
+.board {
   height: 26px;
+  z-index: 1;
 }
 
 .column {
@@ -7,4 +13,12 @@
   width: 24px;
   height: 24px;
   display: inline-block;
+  z-index: 1;
+}
+
+.start {
+  z-index: 10;
+  position: relative;
+  right: -135px;
+  top: -275px;
 }
