@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
@@ -20,6 +21,7 @@ import { CiderListComponent } from './components/cider/cider-list/cider-list.com
 import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
 import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
+import { JukeboxComponent } from './components/jukebox/jukebox.component'
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
@@ -49,6 +51,7 @@ export const firebaseConfig = {
     CiderListComponent,
     CiderDetailsComponent,
     CiderCreateComponent,
+    JukeboxComponent,
     MenuComponent,
     MenuListComponent,
     MenuDetailsComponent,
@@ -60,6 +63,7 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpModule,
     FormsModule,
     Angular2FontawesomeModule,
     AngularFireModule.initializeApp(firebaseConfig),

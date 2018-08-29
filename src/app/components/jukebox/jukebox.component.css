@@ -1,0 +1,49 @@
+.albums-holder h3 {
+  text-align: center;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.album, .songs li {
+  cursor: pointer;
+}
+
+.card {
+  width: 250px;
+  height: auto;
+  text-align: center;
+}
+
+.card h4 {
+  font-size: 1vw;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.playlist {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.playlist .card {
+  width: 100%;
+}
+
+.trackInfo {
+  line-height: 80%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.currentSongImage {
+  position: relative;
+  width: 100px;
+  height: auto;
+  float: left;
+}
