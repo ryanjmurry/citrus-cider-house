@@ -11,7 +11,5 @@ export class UserComments {
     public message:string,
     
   ){
-
-  };
+  }
 }
-

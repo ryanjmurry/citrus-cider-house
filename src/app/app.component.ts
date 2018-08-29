@@ -15,21 +15,19 @@ export class AppComponent {
 
   constructor(public authService: AuthService) {
     this.authService.user.subscribe(user => {
-      console.log(user);
       if (user == null) {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.displayName;
       }
     });
   }
 
   login() {
-    this.authService.login();
+    this.authService.googleLogin();
   }
 
   logout() {
-    this.authService.logout();
+    this.authService.signOut();
   }
 }

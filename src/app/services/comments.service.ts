@@ -11,7 +11,6 @@ export class CommentsService {
 
   constructor(private afDb: AngularFireDatabase) {
     this.comments = afDb.list('/userComments')
-
   }
 
   saveComment(userComment: UserComments): void {
@@ -20,10 +19,10 @@ export class CommentsService {
 
   getComments(): AngularFireList<UserComments> {
     return this.comments;
-
   }
 
   // getComment(): AngularFireList<Comment> {
   //   return Comment
   // }
 }
+
