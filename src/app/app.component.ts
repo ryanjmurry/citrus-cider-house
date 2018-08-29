@@ -20,16 +20,15 @@ export class AppComponent {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.displayName;
       }
     });
   }
 
   login() {
-    this.authService.login();
+    this.authService.googleLogin();
   }
 
   logout() {
-    this.authService.logout();
+    this.authService.signOut();
   }
 }
