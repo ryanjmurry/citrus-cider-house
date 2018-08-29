@@ -1,16 +1,21 @@
 .cider-details {
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 label {
-  font-size: 22px;
   font-weight: bold;
-  font-family: 'Pacifico', serif;
 }
 
-.btn {
-  width: 50%;
+.name {
+  font-family: 'Pacifico', serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.delete-cider-button {
+  margin-right: 10px;
 }
 
