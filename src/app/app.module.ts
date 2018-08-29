@@ -27,13 +27,24 @@ import { MenuListComponent } from './components/menu/menu-list/menu-list.compone
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
 import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { PublishCommentComponent } from './components/admin/publish-comment/publish-comment.component';
+import { PublishCommentComponent } from './components/admin/admin-comments/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
 import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
-import { UserListComponent } from './components/admin/user-list/user-list.component';
-import { UserDetailsComponent } from './components/admin/user-details/user-details.component';
+import { UserListComponent } from './components/admin/admin-users/user-list/user-list.component';
+import { UserDetailsComponent } from './components/admin/admin-users/user-details/user-details.component';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
+import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
+import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
+import { AdminMerchComponent } from './components/admin/admin-merch/admin-merch.component';
+import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.component';
+import { AdminCidersListComponent } from './components/admin/admin-ciders/admin-ciders-list/admin-ciders-list.component';
+import { AdminCidersDetailsComponent } from './components/admin/admin-ciders/admin-ciders-details/admin-ciders-details.component';
+import { AdminCidersCreateComponent } from './components/admin/admin-ciders/admin-ciders-create/admin-ciders-create.component';
+import { AdminMenuCreateComponent } from './components/admin/admin-menu/admin-menu-create/admin-menu-create.component';
+import { AdminMenuDetailsComponent } from './components/admin/admin-menu/admin-menu-details/admin-menu-details.component';
+import { AdminMenuListComponent } from './components/admin/admin-menu/admin-menu-list/admin-menu-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -65,7 +76,18 @@ export const firebaseConfig = {
     GameComponent,
     CommentsCarouselComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AdminUsersComponent,
+    AdminCidersComponent,
+    AdminCommentsComponent,
+    AdminMerchComponent,
+    AdminMenuComponent,
+    AdminCidersListComponent,
+    AdminCidersDetailsComponent,
+    AdminCidersCreateComponent,
+    AdminMenuCreateComponent,
+    AdminMenuDetailsComponent,
+    AdminMenuListComponent
   ],
   imports: [
     BrowserModule,

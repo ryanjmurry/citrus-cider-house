@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
+  currentView: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show(view: string) {
+    this.currentView = view;
   }
 
 }
