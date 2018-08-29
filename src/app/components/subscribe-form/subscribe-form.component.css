@@ -1,22 +1,14 @@
 .subscribe-container {
   padding: 20px;
   border-radius: 10px;
-  background: #3c1406e6;
+  background: #ff4c0de6;
   box-shadow: 2px 2px 5px black;
-  /* position: static; */
-  left: 30%;
-  top: 160px;
-}
-
-.header-content {
-  text-align: center;
+  width: 50%;
+  margin: 10px auto;
   color: white;
 }
 
 .row {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.commentArea {
-  margin-bottom: 10px;
-}
