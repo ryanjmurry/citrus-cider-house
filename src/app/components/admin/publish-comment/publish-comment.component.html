@@ -4,8 +4,10 @@
     <div class="card-header">{{comment.name}}</div>
     <div class="card-body">
       <p class="card-text">{{comment.message}}</p>
+      <label class="form-check-label" for="publish">Publish?</label>
+      <input class="form-check-input" type="checkbox" value="" class="publish">
     </div>
-    <div class="card-footer">posted on {{comment.timestamp.value | date}}</div>
+    <div class="card-footer">posted on {{comment.timestamp.value | date:'short'}}</div>
   </div>
   </div>
 </div>
