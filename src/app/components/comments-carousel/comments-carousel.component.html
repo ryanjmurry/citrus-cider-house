@@ -1,9 +1,9 @@
 <div class="carouselContainer">
   <ngb-carousel>
     <div *ngFor="let comment of comments">
-      <ng-template ngbSlide *ngIf="this.comment.publish == true">
+      <ng-template class="messageContainer" ngbSlide *ngIf="this.comment.publish == true">
         <p>{{comment.message}}</p>
-        <p>{{comment.name}}</p>
+        <p class="carouselName">-{{comment.name}}</p>
       </ng-template>
     </div>
   </ngb-carousel>
