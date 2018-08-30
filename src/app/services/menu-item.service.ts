@@ -34,9 +34,7 @@ export class MenuItemService {
   deleteAll(): void {
     this.menuItemsRef.remove().catch(error => this.handleError(error));
   }
-
   
-
   private handleError(error) {
     console.log(error);
   }
