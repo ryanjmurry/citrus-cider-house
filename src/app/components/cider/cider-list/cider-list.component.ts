@@ -26,8 +26,4 @@ export class CiderListComponent implements OnInit {
       this.ciders = ciders;
     });
   }
-
-  deleteCiders() {
-    this.ciderService.deleteAll();
-  }
 }
