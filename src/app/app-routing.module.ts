@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
+import { MerchComponent } from './components/merch/merch.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'lemonparty',
     component: GameComponent
+  },
+  {
+    path: 'merch',
+    component: MerchComponent
   }
 ];
 
