@@ -19,13 +19,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CiderComponent } from './components/cider/cider.component';
 import { CiderListComponent } from './components/cider/cider-list/cider-list.component';
 import { CiderDetailsComponent } from './components/cider/cider-details/cider-details.component';
-import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import { JukeboxComponent } from './components/jukebox/jukebox.component'
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
 import { MenuDetailsComponent } from './components/menu/menu-details/menu-details.component';
-import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { PublishCommentComponent } from './components/admin/admin-comments/publish-comment/publish-comment.component';
 import { AuthService } from './services/auth.service';
@@ -65,12 +63,10 @@ export const firebaseConfig = {
     CiderComponent,
     CiderListComponent,
     CiderDetailsComponent,
-    CiderCreateComponent,
     JukeboxComponent,
     MenuComponent,
     MenuListComponent,
     MenuDetailsComponent,
-    MenuCreateComponent,
     AdminComponent,
     PublishCommentComponent,
     GameComponent,
