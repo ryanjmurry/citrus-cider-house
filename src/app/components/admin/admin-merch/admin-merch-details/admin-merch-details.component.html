@@ -1,3 +1,31 @@
-<p>
-  admin-merch-details works!
-</p>
+<div *ngIf="merchItem">
+    <div>
+      <label>Name: </label> {{merchItem.name}}
+    </div>
+    <div>
+      <label>Price: </label> ${{merchItem.price}}
+    </div>
+    <div>
+      {{merchItem.description}}
+    </div>
+  
+    <span class="btn btn-sm btn-danger" (click)="deleteMerchItem()">Delete</span>
+    <span class="btn btn-sm btn-info" (click)="showUpdateForm()">Update</span>
+  </div>
+  
+  <div *ngIf="updateIsActive">
+    <div class="form-group">
+      <label for="name">Item Name:</label>
+      <input type="text" class="form-control" id="name" required [value]="merchItem.name" name="name" #updateName>
+    </div>
+    <div class="form-group">
+      <label for="price">Item Price:</label>
+      <input type="number" class="form-control" id="price" required [value]="merchItem.price" name="name" #updatePrice>
+    </div>
+    <div class="form-group">
+      <label for="name">Item Description:</label>
+      <input type="text" class="form-control" id="description" required [value]="merchItem.description" name="name" #updateDescription>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="onSubmit(merchItem.key, updateName.value, updatePrice.value, updateDescription.value)">Submit</button>
+  </div>
+  
