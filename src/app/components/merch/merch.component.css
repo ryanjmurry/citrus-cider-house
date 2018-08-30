@@ -1,0 +1,20 @@
+.merch-list {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  width: 75%;
+  margin: 10px auto;
+  background-image: linear-gradient(#e2fce199, rgb(255, 180, 27));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.merch-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 58px;
+  color: #840000;
+  text-shadow: #020202 0.5px 0.5px 1px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

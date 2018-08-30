@@ -1,0 +1,23 @@
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Created</th>
+      <th scope="col">Publish</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comment of comments; let i=index" placement="top" ngbPopover="{{this.comment.message}}" popoverClass="popoverClass" popoverTitle="User Comment">
+      <td (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">{{i}}</td>
+      <td>{{comment.name}}</td>
+      <td>{{comment.email}}</td>
+      <td>{{comment.timestamp.value | date:'short'}}</td>
+      <td><input class="form-check-input" type="checkbox" value="" class="publish" [checked]="this.comment.publish" (change)="togglePublish($event, this.comment)">
+      </td>
+      <td><button class="btn btn-danger" (click)="deleteComment(this.comment)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

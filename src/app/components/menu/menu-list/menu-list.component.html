@@ -1,0 +1,7 @@
+<div class="menu-list">
+  <h1 class="menu-title">Menu</h1>
+  <hr>
+  <div class="menu-item" *ngFor="let menuItem of menuItems">
+    <app-menu-details [menuItem]="menuItem"></app-menu-details>
+  </div>
+</div>

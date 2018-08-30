@@ -1,0 +1,21 @@
+footer { 
+    position: fixed;
+    height: 60px;
+    bottom: 0px;
+    width: 100%;
+    background: #FBF7E9;
+    border-top: 3px solid #e1a301;
+    font-weight: bold;
+}
+
+.footer-link {
+    color: rgb(223, 178, 60);
+    font-size: 20px;
+    bottom: 15px;
+    left: 20px;
+    position: fixed;
+}
+
+.footer-link:hover {
+    color: rgb(230, 208, 17); 
+}

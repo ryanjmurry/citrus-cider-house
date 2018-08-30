@@ -1,0 +1,30 @@
+<div *ngIf="menuItem">
+  <div>
+    <label>Name: </label> {{menuItem.name}}
+  </div>
+  <div>
+    <label>Price: </label> ${{menuItem.price}}
+  </div>
+  <div>
+    {{menuItem.description}}
+  </div>
+
+  <span class="btn btn-sm btn-danger" (click)="deleteMenuItem()">Delete</span>
+  <span class="btn btn-sm btn-info" (click)="showUpdateForm()">Update</span>
+</div>
+
+<div *ngIf="updateIsActive">
+  <div class="form-group">
+    <label for="name">Item Name:</label>
+    <input type="text" class="form-control" id="name" required [value]="menuItem.name" name="name" #updateName>
+  </div>
+  <div class="form-group">
+    <label for="price">Item Price:</label>
+    <input type="number" class="form-control" id="price" required [value]="menuItem.price" name="name" #updatePrice>
+  </div>
+  <div class="form-group">
+    <label for="name">Item Description:</label>
+    <input type="text" class="form-control" id="description" required [value]="menuItem.description" name="name" #updateDescription>
+  </div>
+  <button type="submit" class="btn btn-success" (click)="onSubmit(menuItem.key, updateName.value, updatePrice.value, updateDescription.value)">Submit</button>
+</div>
