@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { masterFirebaseConfig } from './api-keys';
+// import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -47,13 +47,13 @@ import { AdminMerchCreateComponent } from './components/admin/admin-merch/admin-
 import { AdminMerchDetailsComponent } from './components/admin/admin-merch/admin-merch-details/admin-merch-details.component';
 import { AdminMerchListComponent } from './components/admin/admin-merch/admin-merch-list/admin-merch-list.component';
 
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  projectId: masterFirebaseConfig.projectId,
-  storageBucket: masterFirebaseConfig.storageBucket
-};
+// export const firebaseConfig = {
+//   apiKey: masterFirebaseConfig.apiKey,
+//   authDomain: masterFirebaseConfig.authDomain,
+//   databaseURL: masterFirebaseConfig.databaseURL,
+//   projectId: masterFirebaseConfig.projectId,
+//   storageBucket: masterFirebaseConfig.storageBucket
+// };
 
 @NgModule({
   declarations: [
@@ -98,7 +98,7 @@ export const firebaseConfig = {
     HttpModule,
     FormsModule,
     Angular2FontawesomeModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
