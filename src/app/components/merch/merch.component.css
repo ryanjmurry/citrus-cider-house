@@ -1,13 +1,15 @@
-.menu-list {
+.merch-list {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px black;
   width: 75%;
   margin: 10px auto;
   background-image: linear-gradient(#e2fce199, rgb(255, 180, 27));
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.menu-title {
+.merch-title {
   font-family: 'Pacifico', cursive;
   font-size: 58px;
   color: #840000;
@@ -15,14 +17,4 @@
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 10px;
-}
-
-.menu-item {
-  text-align: center;
-}
-
-hr {
-  border-top: 4px solid rgb(132, 0, 0);
-  margin-top: 8px;
-  margin-bottom: 16px;
 }
