@@ -8,23 +8,17 @@ import { UserDataService } from '../../../../services/user-data.service';
 })
 export class UserDetailsComponent implements OnInit {
 
-  @Input() user;
   
-  checked: boolean;
+  
+  
 
   constructor(private userDataService: UserDataService) {}
 
   ngOnInit() {
-    this.checked = this.user.roles.admin;
+    
   }
 
-  toggleAdmin(uid: string) {
-    if(this.user.roles.admin) {
-      this.userDataService.removeAdminRole(uid);
-    } else {
-      this.userDataService.giveAdminRole(uid);
-    }
-  }
+
 
 
 

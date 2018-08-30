@@ -5,6 +5,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">User Role</th>
+      <th scope="col">Toggle Admin</th>
     </tr>
   </thead>
   <tbody>
@@ -12,7 +13,8 @@
       <td>{{i}}</td>
       <td>{{user.email}}</td>
       <td>{{user.displayName}}</td>
-      <td>{{user.roles.admin}}</td>
+      <td *ngIf="user.roles.admin">Admin</td>
+      <td *ngIf="!user.roles.admin">Customer</td>
       <td><input class="form-check-input" type="checkbox" value="" class="adminToggle" [checked]="user.roles.admin" (change)="toggleAdmin(user.uid, this.user)"></td>
     </tr>
   </tbody>
