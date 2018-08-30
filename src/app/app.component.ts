@@ -10,8 +10,8 @@ import { AuthService } from './services/auth.service';
 export class AppComponent {
 
   user;
-  private isLoggedIn: Boolean;
-  private userName: String;
+  isLoggedIn: Boolean;
+  userName: String;
 
   constructor(public authService: AuthService) {
     this.authService.user.subscribe(user => {
