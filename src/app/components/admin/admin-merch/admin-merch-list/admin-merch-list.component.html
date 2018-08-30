@@ -1,7 +1,9 @@
-<h1>Merch</h1>
-<div *ngFor="let merchItem of merchItems">
-  <app-admin-merch-details [merchItem]="merchItem"></app-admin-merch-details>
-</div>
-<div>
-  <button class="btn btn-danger" (click)="deleteMerchItems()">Delete All</button>
+<div class="merch-container">
+  <h1>Merch</h1>
+  <div *ngFor="let merchItem of merchItems">
+    <app-admin-merch-details [merchItem]="merchItem"></app-admin-merch-details>
+  </div>
+  <div>
+    <button class="btn btn-danger" (click)="deleteMerchItems()">Delete All</button>
+  </div>
 </div>

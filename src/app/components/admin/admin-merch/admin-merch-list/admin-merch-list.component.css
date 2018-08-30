@@ -1,0 +1,9 @@
+.merch-container {
+  padding: 20px;
+  border-radius: 10px;
+  background: #ff4c0de6;
+  box-shadow: 2px 2px 5px black;
+  width: 50%;
+  margin: 40px auto;
+  color: white;
+}

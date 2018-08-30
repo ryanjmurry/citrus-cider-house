@@ -1,13 +1,22 @@
 .cider-list {
   padding: 20px;
   border-radius: 10px;
+  background: #ff4c0de6;
   box-shadow: 2px 2px 5px black;
-  width: 75%;
-  margin: 10px auto;
-  background-image: linear-gradient(#e4cc99, rgb(255, 180, 27));
+  width: 25%;
+  margin: 40px auto;
+  color: white;
 }
 
-.cider-list-container {
-  margin: 0 auto;
-  width: 100%;
+hr {
+  border-top: 1px solid rgb(0, 0, 0);
+}
+
+h1 {
+  display: inline;
+}
+
+.delete-all {
+  margin-left: 25px;
+  margin-bottom: 5px;
 }
