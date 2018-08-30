@@ -49,4 +49,8 @@ export class PublishCommentComponent implements OnInit {
       this.commentsService.unpublishComment(comment)
     }
   }
+
+  deleteComment(comment) {
+    this.commentsService.deleteComment(comment)
+  }
 }
