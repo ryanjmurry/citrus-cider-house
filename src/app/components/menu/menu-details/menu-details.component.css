@@ -1,11 +1,15 @@
 .menu-details {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   width: 200px;
   margin: 0 auto;
 }
 
 label {
   font-weight: bold;
+}
+
+.name {
+  font-family: 'Pacifico', serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: block;
 }

@@ -1,9 +1,7 @@
 <div *ngIf="menuItem">
-  <div>
-    <label>Name: </label> {{menuItem.name}}
-  </div>
+  <span class="name">{{menuItem.name}}</span>
   <div class="menu-details">
-    <label>Price:</label>{{menuItem.price}}
-    <label>{{menuItem.description}}</label>
+    <p>$ {{menuItem.price}}</p>
+    <p>{{menuItem.description}}</p>
   </div>
 </div>
