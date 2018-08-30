@@ -14,11 +14,14 @@ export class GameComponent implements OnInit {
   public isGameOver = false;
   public score = 0;
   public misses = 0;
+  private dropletInterval: number = 200;
+  private checkInterval: number = 100
   BOARD_SIZE = 18
 
 
   private dropletMoves;
   private catchInterval;
+  private scoreInterval;
 
   constructor() {
     this.setBoard();
@@ -53,11 +56,15 @@ export class GameComponent implements OnInit {
     this.isGameStart = true;
     this.dropletMovement();
     this.checkCatch();
+    this.checkScore();
   }
 
   restartGame(){
     clearInterval(this.dropletMoves);
+    this.dropletInterval = 200;
     clearInterval(this.catchInterval);
+    this.checkInterval = 100;
+    clearInterval(this.scoreInterval);
     this.droplet.x = this.randomNumber();
     this.droplet.y = 0;
     this.cup.x = 8;
@@ -70,7 +77,7 @@ export class GameComponent implements OnInit {
 
   dropletMovement(): void {
     if (this.isGameStart == true) {
-    this.dropletMoves = setInterval(() => {this.droplet.y ++}, 200);
+    this.dropletMoves = setInterval(() => {this.droplet.y ++}, this.dropletInterval);
     }
   }
 
@@ -85,7 +92,22 @@ export class GameComponent implements OnInit {
         this.droplet.x = this.randomNumber();
         this.droplet.y = 0;
       }
-    }, 100);
+    }, this.checkInterval);
+  }
+
+  checkScore(): void {
+    this.scoreInterval = setInterval(() => {
+      if (this.score === 5) {
+        this.dropletInterval -= 50
+        this.checkInterval -= 50
+      } else if (this.score === 20) {
+        this.dropletInterval -= 10
+        this.checkInterval -= 10
+      } else if (this.score === 30) {
+        this.dropletInterval -= 10
+        this.checkInterval -= 10
+      }
+    }, 50)
   }
 
   randomNumber(): any { return Math.floor(Math.random() * this.BOARD_SIZE); }

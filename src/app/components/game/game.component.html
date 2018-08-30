@@ -13,6 +13,7 @@
         <p>Droplets Missed: {{misses}}</p>
         <button *ngIf="isGameStart == false" type="button" class="btn btn-primary start" (click)='startGame()'>Start Game</button>
         <button *ngIf="isGameStart" type="button" class="btn btn-danger" (click)='restartGame()'>Restart Game</button>
+        <p>Last Score: {{finalScore}}</p>
       </div>
     </div>
   </div>
