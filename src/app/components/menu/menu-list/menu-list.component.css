@@ -5,8 +5,6 @@
   width: 75%;
   margin: 10px auto;
   background-image: linear-gradient(#e2fce199, rgb(255, 180, 27));
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .menu-title {
@@ -20,6 +18,11 @@
 }
 
 .menu-item {
-  display: inline;
-  padding: 20px;
+  width: 25%;
+}
+
+hr {
+  border-top: 4px solid rgb(132, 0, 0);
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
