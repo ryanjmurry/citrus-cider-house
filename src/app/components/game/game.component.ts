@@ -14,11 +14,15 @@ export class GameComponent implements OnInit {
   public isGameOver = false;
   public score = 0;
   public misses = 0;
+  public finalScore;
+  private dropletInterval: number = 200;
+  private checkInterval: number = 100
   BOARD_SIZE = 18
 
 
   private dropletMoves;
   private catchInterval;
+  private scoreInterval;
 
   constructor() {
     this.setBoard();
@@ -56,8 +60,12 @@ export class GameComponent implements OnInit {
   }
 
   restartGame(){
+    this.finalScore = this.score;
     clearInterval(this.dropletMoves);
+    this.dropletInterval = 200;
     clearInterval(this.catchInterval);
+    this.checkInterval = 100;
+    clearInterval(this.scoreInterval);
     this.droplet.x = this.randomNumber();
     this.droplet.y = 0;
     this.cup.x = 8;
@@ -70,7 +78,7 @@ export class GameComponent implements OnInit {
 
   dropletMovement(): void {
     if (this.isGameStart == true) {
-    this.dropletMoves = setInterval(() => {this.droplet.y ++}, 200);
+    this.dropletMoves = setInterval(() => {this.droplet.y ++}, this.dropletInterval);
     }
   }
 
@@ -80,18 +88,47 @@ export class GameComponent implements OnInit {
         this.score ++
         this.droplet.x = this.randomNumber();
         this.droplet.y = 0;
+        this.checkScore();
       } else if (this.droplet.y > 17) {
         this.misses ++
         this.droplet.x = this.randomNumber();
         this.droplet.y = 0;
+        this.checkMisses();
       }
-    }, 100);
+    }, this.checkInterval);
+  }
+
+  updateInterval() {
+    clearInterval(this.dropletMoves);
+    clearInterval(this.catchInterval);
+    this.dropletMovement();
+    this.checkCatch();
+  }
+
+  checkMisses() {
+    if (this.misses >= 10) {
+      this.restartGame();
+    }
+  }
+
+  checkScore(): void {
+    if (this.score === 5) {
+      this.dropletInterval -= 35
+      this.checkInterval -= 30
+    } else if (this.score === 15) {
+      this.dropletInterval -= 35
+      this.checkInterval -= 30
+    } else if (this.score === 25) {
+      this.dropletInterval -= 35
+      this.checkInterval -= 30
+    }
+    this.checkMisses();
+    this.updateInterval();
   }
 
   randomNumber(): any { return Math.floor(Math.random() * this.BOARD_SIZE); }
 
   handleKeyboardEvents(e: KeyboardEvent) {
-    console.log(e)
     if (e.key === 'ArrowRight') {
       this.cup.x < 17 ? this.cup.x ++: this.cup.x;
     } else if (e.key === 'ArrowLeft') {
