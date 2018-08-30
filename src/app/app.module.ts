@@ -31,7 +31,6 @@ import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
 import { UserListComponent } from './components/admin/admin-users/user-list/user-list.component';
-import { UserDetailsComponent } from './components/admin/admin-users/user-details/user-details.component';
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
 import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
@@ -72,7 +71,6 @@ export const firebaseConfig = {
     GameComponent,
     CommentsCarouselComponent,
     UserListComponent,
-    UserDetailsComponent,
     AdminUsersComponent,
     AdminCidersComponent,
     AdminCommentsComponent,
