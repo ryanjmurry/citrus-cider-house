@@ -11,4 +11,20 @@
   background: #ff4c0de6;
   box-shadow: 2px 2px 5px black;
   color: white;
+  margin-top: 40px;
 }
+
+.headerContact {
+  border-bottom: 1.5px solid rgba(34,34,34,0.8);
+  width: 30%;
+  margin: auto;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 6px -8px black;
+  -moz-box-shadow:    0 8px 6px -8px black;
+  -webkit-box-shadow: 0 8px 6px -8px black;
+}
+
+p {
+  margin: 3px;
+}
+
