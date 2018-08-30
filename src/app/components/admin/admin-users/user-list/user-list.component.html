@@ -1,3 +1,20 @@
-<div *ngFor="let user of users">
-  <app-user-details [user]="user"></app-user-details>
+<div class="row">
+  <ul class="list-group list-group-flush">
+    <div class="col">
+      <div *ngFor="let user of users">
+        <div *ngIf="user.roles.admin">
+          <app-user-details [user]="user"></app-user-details>
+        </div>
+      </div>
+    </div>
+  </ul>
+  <ul class="list-group list-group-flush">
+    <div class="col">
+      <div *ngFor="let user of users">
+        <div *ngIf="!user.roles.admin">
+          <app-user-details [user]="user"></app-user-details>
+        </div>
+      </div>
+    </div>
+  </ul>
 </div>
