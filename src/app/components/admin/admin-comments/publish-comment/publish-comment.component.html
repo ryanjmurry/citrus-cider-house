@@ -6,6 +6,7 @@
       <th scope="col">Email</th>
       <th scope="col">Created</th>
       <th scope="col">Publish</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
       <td>{{comment.timestamp.value | date:'short'}}</td>
       <td><input class="form-check-input" type="checkbox" value="" class="publish" [checked]="this.comment.publish" (change)="togglePublish($event, this.comment)">
       </td>
+      <td><button class="btn btn-danger" (click)="deleteComment(this.comment)">Delete</button></td>
     </tr>
   </tbody>
 </table>
