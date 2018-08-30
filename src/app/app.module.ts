@@ -31,7 +31,6 @@ import { AdminGuard } from './guards/admin.guard';
 import { GameComponent } from './components/game/game.component';
 import { CommentsCarouselComponent } from './components/comments-carousel/comments-carousel.component';
 import { UserListComponent } from './components/admin/admin-users/user-list/user-list.component';
-import { UserDetailsComponent } from './components/admin/admin-users/user-details/user-details.component';
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 import { AdminCidersComponent } from './components/admin/admin-ciders/admin-ciders.component';
 import { AdminCommentsComponent } from './components/admin/admin-comments/admin-comments.component';
@@ -44,6 +43,9 @@ import { AdminMenuCreateComponent } from './components/admin/admin-menu/admin-me
 import { AdminMenuDetailsComponent } from './components/admin/admin-menu/admin-menu-details/admin-menu-details.component';
 import { AdminMenuListComponent } from './components/admin/admin-menu/admin-menu-list/admin-menu-list.component';
 import { MerchComponent } from './components/merch/merch.component';
+import { AdminMerchCreateComponent } from './components/admin/admin-merch/admin-merch-create/admin-merch-create.component';
+import { AdminMerchDetailsComponent } from './components/admin/admin-merch/admin-merch-details/admin-merch-details.component';
+import { AdminMerchListComponent } from './components/admin/admin-merch/admin-merch-list/admin-merch-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -73,7 +75,6 @@ export const firebaseConfig = {
     GameComponent,
     CommentsCarouselComponent,
     UserListComponent,
-    UserDetailsComponent,
     AdminUsersComponent,
     AdminCidersComponent,
     AdminCommentsComponent,
@@ -85,7 +86,10 @@ export const firebaseConfig = {
     AdminMenuCreateComponent,
     AdminMenuDetailsComponent,
     AdminMenuListComponent,
-    MerchComponent
+    MerchComponent,
+    AdminMerchCreateComponent,
+    AdminMerchDetailsComponent,
+    AdminMerchListComponent
   ],
   imports: [
     BrowserModule,

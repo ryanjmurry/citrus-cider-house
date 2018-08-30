@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class UserListComponent implements OnInit {
 
   users: any;
+  checked: boolean;
 
   constructor(private userDataService: UserDataService) { }
 
@@ -25,5 +26,13 @@ export class UserListComponent implements OnInit {
     ).subscribe(users => {
       this.users = users;
     });
+  }
+
+  toggleAdmin(uid: string, user) {
+    if (user.roles.admin) {
+      this.userDataService.removeAdminRole(uid);
+    } else {
+      this.userDataService.giveAdminRole(uid);
+    }
   }
 }

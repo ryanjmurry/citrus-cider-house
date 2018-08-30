@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <div class="game-body">
     <div class="row">
@@ -14,7 +15,22 @@
         <button *ngIf="isGameStart == false" type="button" class="btn btn-primary start" (click)='startGame()'>Start Game</button>
         <button *ngIf="isGameStart" type="button" class="btn btn-danger" (click)='restartGame()'>Restart Game</button>
         <p>Last Score: {{finalScore}}</p>
+=======
+<div class="game-body">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row board" *ngFor="let column of board; let i = index;">
+        <div class="column" [ngStyle]="{'background-image': setColors(i, j)}" *ngFor="let row of column; let j = index"></div>
+>>>>>>> devOps
       </div>
+    </div>
+    <div class="col-md-4">
+      <h4>Catch the droplets!</h4>
+      <h5>Move your cup with the left and right arrow keys.</h5>
+      <p>Droplets Caught: {{score}}</p>
+      <p>Droplets Missed: {{misses}}</p>
+      <button *ngIf="isGameStart == false" type="button" class="btn btn-primary start" (click)='startGame()'>Start Game</button>
+      <button *ngIf="isGameStart" type="button" class="btn btn-danger" (click)='restartGame()'>Restart Game</button>
     </div>
   </div>
 </div>
