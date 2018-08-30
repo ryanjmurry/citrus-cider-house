@@ -2,7 +2,7 @@
 
 #### Epicodus Angular Team Project, Aug 30th, 2018
 
-#### Ryan Murray, Reese Glasscock, Nate Cottle, Elly Maimon
+#### Ryan Murry, Reese Glasscock, Nate Cottle, Elly Maimon
 
 ## Description
 
@@ -17,7 +17,7 @@ Complete the steps below to clone the project on to your personal machine and ge
 Clone the repo from github to your machine
 
 ```
-git clone https://github.com/ryanjmurray/angular-team-week.git
+git clone https://github.com/ryanjmurry/angular-team-week.git
 ```
 
 This program is dependent that you already have node installed on your machine and node package manager. Afterwards run the install command.
@@ -25,10 +25,20 @@ This program is dependent that you already have node installed on your machine a
 ```
 npm install
 ```
+#### Api Key Installation
+##### Firebase
+ Go to https://console.firebase.google.com/ to sign up and create your database for your project. Select add Firebase to your web app to view api credentials.
 
-You will then need to make sure you have a firebase account and a database available to store and retrieve information. Go to https://console.firebase.google.com/ to sign up and create your database for your project. Create a file in the root of your app folder named api-keys.ts and paste in the information for adding firebase as a web app. Follow the pattern below for creating the file:
+##### Jukebox Api
+Go to https://theaudiodb.com/ to sign up and request an api key.
 
+##### app/api-keys.ts
+
+Create a file in the root of your app folder named api-keys.ts. Paste in the information for adding firebase as a web app and your jukebox api key.
+Follow the pattern below for creating the file:
 ```
+app/api-keys.ts
+
 export const masterFirebaseConfig = {
   apiKey: "YOUR_API_KEY_HERE",
   authDomain: "YOUR_AUTH_DOMAIN_HERE",
@@ -37,6 +47,8 @@ export const masterFirebaseConfig = {
   storageBucket: "YOUR_STORAGE_BUCKET_HERES",
   messagingSenderId: "YOUR_MESSAGING_SENDER_ID_HERE"
 }
+
+export const jukeboxAPIKey = "YOUR_API_KEY_HERE"
 ```
 
 To run the program run the command from the project file:
