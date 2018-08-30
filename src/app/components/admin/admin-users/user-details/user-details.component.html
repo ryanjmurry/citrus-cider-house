@@ -1,13 +1,20 @@
-<div class="row">
+<li class="list-group-item">
+  {{user.displayName}} | {{user.email}}
+  <input class="form-check-input" type="checkbox" value="" class="adminToggle" [checked]="user.roles.admin" (change)=toggleAdmin(user.uid)>
+</li>
+
+
+
+<!-- <div class="row">
   <div *ngIf="user.roles.admin"class="col">
     {{user.email}}
   </div>
   <div *ngIf="!user.roles.admin" class="col">
     {{user.email}}
   </div>
-</div>
+</div> -->
 
-<!-- <input class="form-check-input" type="checkbox" value="" class="adminToggle" [checked]="user.roles.admin" (change)=toggleAdmin(user.uid)> -->
+
 
 
 

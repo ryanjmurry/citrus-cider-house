@@ -25,7 +25,4 @@ export class UserDetailsComponent implements OnInit {
       this.userDataService.giveAdminRole(uid);
     }
   }
-
-
-
 }
