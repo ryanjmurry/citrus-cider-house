@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+	background-image: url('./assets/citrus-background.jpg');
+	height: 100%; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

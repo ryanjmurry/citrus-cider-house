@@ -1,4 +1,5 @@
-<app-header></app-header>
-<img class="citrus-background" src="../../../assets/citrus-background.jpg" alt="citrus background">
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-header (userLogin)="login()" (userLogout)="logout()" [isLoggedIn]="isLoggedIn"></app-header>
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>  

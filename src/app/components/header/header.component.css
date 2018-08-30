@@ -1,21 +1,44 @@
 #lemon-logo {
-    width: 130px;
-    height: 130px;
+    width: 300px;
+    height: 300px;
     position: fixed;
-    left: 50%;
-    top: 15px;
-    margin: 0 0 0 -62px;
+    right: -100px;
+    top: -100px;
     z-index: 999;
 }
 
 nav {
     text-align: center;
     width: 100%;
-    height: 95px;
-    background: #ffdeb8;
-    border-bottom: 4px solid #e76c1f;
+    height: 80px;
+    background: #FBF7E9;
+    border-bottom: 3px solid #e1a301;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 998;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: rgb(223, 178, 60);
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.nav-link:hover {
+    color: rgb(230, 208, 17); 
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 34px;
+    color: #840000;
+}
+
+.logButton {
+    position: fixed;
+    right: 200px;
+    top: 18px;
 }

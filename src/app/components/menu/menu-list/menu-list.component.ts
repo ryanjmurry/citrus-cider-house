@@ -26,8 +26,4 @@ export class MenuListComponent implements OnInit {
       this.menuItems = menuItems;
     });
   }
-
-  deleteMenuItems() {
-    this.menuItemService.deleteAll();
-  }
 }
