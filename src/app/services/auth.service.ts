@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
@@ -41,21 +42,15 @@ export class AuthService {
 
   private updateUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
-    if (user.roles.admin === true) {
-      return userRef;
-    } else {
-      const data: User = {
-        uid: user.uid,
-        displayName: user.displayName,
-        photoURL: user.photoURL,
-        email: user.email,
-        roles: {
-          customer: true,
-          admin: false
-        }
+    const data: User = {
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+      uid: user.uid,
+      email: user.email,
+      roles: {
+        customer: true,
       }
-      return userRef.set(data, { merge: true })
     }
+    return userRef.set(data, { merge: true })
   }
-  
 }

@@ -43,6 +43,7 @@ import { AdminCidersCreateComponent } from './components/admin/admin-ciders/admi
 import { AdminMenuCreateComponent } from './components/admin/admin-menu/admin-menu-create/admin-menu-create.component';
 import { AdminMenuDetailsComponent } from './components/admin/admin-menu/admin-menu-details/admin-menu-details.component';
 import { AdminMenuListComponent } from './components/admin/admin-menu/admin-menu-list/admin-menu-list.component';
+import { MerchComponent } from './components/merch/merch.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -83,7 +84,8 @@ export const firebaseConfig = {
     AdminCidersCreateComponent,
     AdminMenuCreateComponent,
     AdminMenuDetailsComponent,
-    AdminMenuListComponent
+    AdminMenuListComponent,
+    MerchComponent
   ],
   imports: [
     BrowserModule,

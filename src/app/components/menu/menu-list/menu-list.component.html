@@ -1,4 +1,6 @@
-<h1>Menu</h1>
-<div *ngFor="let menuItem of menuItems">
-  <app-menu-details [menuItem]="menuItem"></app-menu-details>
+<div class="menu-list">
+  <h1 class="menu-title">Menu</h1>
+  <div class="menu-item" *ngFor="let menuItem of menuItems">
+    <app-menu-details [menuItem]="menuItem"></app-menu-details>
+  </div>
 </div>
