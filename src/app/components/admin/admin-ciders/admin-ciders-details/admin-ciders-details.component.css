@@ -1,0 +1,14 @@
+.cider-details-container {
+  margin-bottom: 25px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.name {
+  font-family: 'Pacifico';
+  font-size: 26px;
+}
+
+.detail {
+  display: block;
+}
