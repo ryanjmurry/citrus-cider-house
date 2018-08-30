@@ -32,7 +32,7 @@ export class CommentsService {
     selectedComment.update({ publish: false }).catch(error => this.handleError(error));
   }
 
-  deleteComment(comment): void {
+  deleteUserComment(comment): void {
     let selectedComment = this.afDb.object('userComments/' + comment.key)
     selectedComment.remove()
   }

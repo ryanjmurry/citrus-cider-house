@@ -50,6 +50,6 @@ export class PublishCommentComponent implements OnInit {
   }
 
   deleteComment(comment) {
-    this.commentsService.deleteComment(comment)
+    this.commentsService.deleteUserComment(comment)
   }
 }
