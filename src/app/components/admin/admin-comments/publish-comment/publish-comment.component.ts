@@ -1,12 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommentsService } from '../../../../services/comments.service';
 import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-publish-comment',
   templateUrl: './publish-comment.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./publish-comment.component.css'],
-  providers: [CommentsService]
+  providers: [CommentsService],
+  styles: [`
+    .popoverClass {
+      max-width: 600px;
+      font-size: 110%;
+      color: black;
+    }
+    .popoverClass .arrow::after {
+      border-top-color: aliceblue;
+    }
+  `]
 })
 export class PublishCommentComponent implements OnInit {
 
