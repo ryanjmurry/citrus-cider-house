@@ -1,8 +1,9 @@
 .create-container {
   padding: 20px;
   border-radius: 10px;
+  background: #ff4c0de6;
   box-shadow: 2px 2px 5px black;
-  width: 80%;
-  margin: 10px auto;
-  background-image: linear-gradient(#e2fce199, rgb(255, 180, 27));
+  width: 50%;
+  margin: 40px auto;
+  color: white;
 }
