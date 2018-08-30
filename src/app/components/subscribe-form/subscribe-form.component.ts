@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserComments } from "../../models/user-comments";
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { CommentsService} from '../../services/comments.service';
 
 @Component({

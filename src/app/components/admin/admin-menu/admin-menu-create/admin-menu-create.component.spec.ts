@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CiderCreateComponent } from './cider-create.component';
+import { AdminMenuCreateComponent } from './admin-menu-create.component';
 
-describe('CiderCreateComponent', () => {
-  let component: CiderCreateComponent;
-  let fixture: ComponentFixture<CiderCreateComponent>;
+describe('AdminMenuCreateComponent', () => {
+  let component: AdminMenuCreateComponent;
+  let fixture: ComponentFixture<AdminMenuCreateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CiderCreateComponent ]
+      declarations: [ AdminMenuCreateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CiderCreateComponent);
+    fixture = TestBed.createComponent(AdminMenuCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

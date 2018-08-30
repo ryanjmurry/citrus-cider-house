@@ -3,9 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CiderComponent } from './components/cider/cider.component';
-import { CiderCreateComponent } from './components/cider/cider-create/cider-create.component';
-import { MenuCreateComponent } from './components/menu/menu-create/menu-create.component';
+import { JukeboxComponent } from './components/jukebox/jukebox.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminGuard } from './guards/admin.guard';
+import { GameComponent } from './components/game/game.component';
 
 const routes: Routes = [
   {
@@ -15,22 +17,27 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
-  }, 
+  },
   {
     path: 'ciders',
     component: CiderComponent
   },
   {
-    path: 'ciders/add',
-    component: CiderCreateComponent
+    path: 'jukebox',
+    component: JukeboxComponent
   },
   {
     path: 'menu',
     component: MenuComponent
   },
   {
-    path: 'menu/add',
-    component: MenuCreateComponent
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'lemonparty',
+    component: GameComponent
   }
 ];
 

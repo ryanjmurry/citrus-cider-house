@@ -1,21 +1,14 @@
 .subscribe-container {
   padding: 20px;
-  width: 40%;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 10px;
-  background: grey;
-}
-
-.header-content {
-  text-align: center;
+  background: #ff4c0de6;
+  box-shadow: 2px 2px 5px black;
+  width: 50%;
+  margin: 10px auto;
   color: white;
 }
 
 .row {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.commentArea {
-  margin-bottom: 10px;
-}

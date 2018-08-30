@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../../../models/menu-item';
-import { MenuItemService } from '../../../services/menu-item.service';
+import { MenuItem } from '../../../../models/menu-item';
+import { MenuItemService } from '../../../../services/menu-item.service';
 
 @Component({
-  selector: 'app-menu-create',
-  templateUrl: './menu-create.component.html',
-  styleUrls: ['./menu-create.component.css']
+  selector: 'app-admin-menu-create',
+  templateUrl: './admin-menu-create.component.html',
+  styleUrls: ['./admin-menu-create.component.css']
 })
-export class MenuCreateComponent implements OnInit {
+export class AdminMenuCreateComponent implements OnInit {
 
   menuItem: MenuItem = new MenuItem();
   submitted = false;
@@ -31,5 +31,4 @@ export class MenuCreateComponent implements OnInit {
     this.submitted = true;
     this.save();
   }
-
 }
