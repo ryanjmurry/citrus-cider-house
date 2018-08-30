@@ -10,30 +10,9 @@ import { MenuItemService } from '../../../services/menu-item.service';
 export class MenuDetailsComponent implements OnInit {
 
   @Input() menuItem: MenuItem;
-
-  updateIsActive: boolean = false;
-
+  
   constructor(private menuItemService: MenuItemService) { }
 
   ngOnInit() {
   }
-
-  showUpdateForm() {
-    this.updateIsActive = true;
-  }
-
-  deleteMenuItem() {
-    this.menuItemService.deleteMenuItem(this.menuItem.key);
-  }
-
-  onSubmit(key: string, updateName: string, updatePrice: string, updateDescription) {
-    this.updateIsActive = false;
-
-    this.menuItemService.updateMenuItem(key, {
-      name: updateName,
-      price: updatePrice,
-      description: updateDescription
-    });
-  }
-
 }
