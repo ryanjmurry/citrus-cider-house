@@ -43,6 +43,7 @@ import { AdminMenuCreateComponent } from './components/admin/admin-menu/admin-me
 import { AdminMenuDetailsComponent } from './components/admin/admin-menu/admin-menu-details/admin-menu-details.component';
 import { AdminMenuListComponent } from './components/admin/admin-menu/admin-menu-list/admin-menu-list.component';
 import { MerchComponent } from './components/merch/merch.component';
+import { ContactInfoComponent } from './components/home/contact-info/contact-info.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -83,7 +84,8 @@ export const firebaseConfig = {
     AdminMenuCreateComponent,
     AdminMenuDetailsComponent,
     AdminMenuListComponent,
-    MerchComponent
+    MerchComponent,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,
