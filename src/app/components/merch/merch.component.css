@@ -1,4 +1,4 @@
-.menu-list {
+.merch-list {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px black;
@@ -9,7 +9,7 @@
   flex-wrap: wrap;
 }
 
-.menu-title {
+.merch-title {
   font-family: 'Pacifico', cursive;
   font-size: 58px;
   color: #840000;
@@ -17,9 +17,4 @@
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 10px;
-}
-
-.menu-item {
-  display: inline;
-  padding: 20px;
 }
