@@ -14,8 +14,4 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  show(view: string) {
-    this.currentView = view;
-  }
-
 }
